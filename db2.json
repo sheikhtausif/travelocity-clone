@@ -1,0 +1,1060 @@
+{
+    "data": [
+        {
+            "hotelId": "77c272b6-18e6-4036-b9c3-7fc5454e3f6a",
+            "name": "Impala Minimalist Palace (Example Hotel) [SANDBOX]",
+            "currency": "EUR",
+            "starRating": 3,
+            "description": {
+                "short": "Don't expect anything fancy. This fictional example hotel has the bare minimum content, rate availability and features you can expect from any hotel on the Impala platform (https://impala.travel). It contains minimum photography at the minimum resolution, only the fields that you can expect to see on every hotel on the platform, and only one room type and rate. Testing with this hotel means your app works well in the rare cases where a hotel has only minimum content available."
+            },
+            "phoneNumbers": [
+                "+123456789"
+            ],
+            "emails": [
+                "gdapi-staging-hotel+77c272b6-18e6-4036-b9c3-7fc5454e3f6a@getimpala.com"
+            ],
+            "websiteUrl": null,
+            "images": [
+                {
+                    "altText": null,
+                    "height": 427,
+                    "width": 640,
+                    "url": "https://cdn.impala.travel/properties/ckihr3b8e00013f6806ds58a3.jpg",
+                    "isHeroImage": true
+                }
+            ],
+            "address": {
+                "line1": "123 Impala Avenue ",
+                "line2": null,
+                "city": "Impalaland",
+                "postalCode": "1234",
+                "region": null,
+                "country": "GBR",
+                "countryName": "United Kingdom of Great Britain and Northern Ireland"
+            },
+            "location": {
+                "longitude": -9.952549,
+                "latitude": 58.386186
+            },
+            "amenities": [
+                {
+                    "code": 50,
+                    "formatted": "Housekeeping "
+                }
+            ],
+            "roomCount": 15,
+            "checkIn": {
+                "from": "15:00"
+            },
+            "checkOut": {
+                "to": "10:00"
+            },
+            "termsAndConditions": "",
+            "createdAt": "2020-12-09T23:03:35.744Z",
+            "updatedAt": "2021-02-17T09:06:16.535Z",
+            "externalUrls": [],
+            "roomTypes": [
+                {
+                    "roomTypeId": "c0376404-6172-4ac6-91ed-14dc405c15b4",
+                    "name": "Standard Room",
+                    "description": "A fictional room you can in your testing. It contains only the bare minimum content you can expect for any room type on the Impala platform, with the smallest resolution images for any room type on our platform (https://impala.travel). Making sure your app works well and displays this room type properly means you're ready for the rare cases where only minimal content is available for a room type.",
+                    "maxOccupancy": 2,
+                    "rates": [
+                        {
+                            "rateId": "581d8e0f04d78ed36ec0cfe5978a3fbf:3ff16f0e97d2a61a77e0f09873540a7b9fb0377d1629c2a82ae2b97758cca676",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 2,
+                            "hotelAgreement": null,
+                            "retailRate": {
+                                "total": {
+                                    "amount": 30000,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.622",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 30000,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "rateId": "ef6bc103a5647e8e970395fc8c86a0c5:56c4927326ded4af9a6722db136a9cbf2e41a643d73f1876a57a7d2f30c00206",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 2,
+                            "hotelAgreement": {
+                                "hotelAgreementId": "A11438",
+                                "dealId": "D2219",
+                                "conditions": [
+                                    "PRIVATE_RATE"
+                                ],
+                                "discount": {
+                                    "count": 5,
+                                    "type": "PERCENTAGE"
+                                },
+                                "specialInstructions": null,
+                                "href": "v1/deal-requests/D2219/agreements/A11438"
+                            },
+                            "retailRate": {
+                                "total": {
+                                    "amount": 28500,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.622",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 28500,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "amenities": [
+                        {
+                            "code": 15,
+                            "formatted": "Bath or Shower"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "altText": null,
+                            "height": 426,
+                            "width": 640,
+                            "url": "https://cdn.impala.travel/area-types/ckihr4dzq00023f68kbi71kji.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hotelId": "0e25533a-2db2-4894-9db1-4c1ff92d798c",
+            "name": "Impala All-Inclusive Always Available Resort (Example Hotel) [SANDBOX]",
+            "currency": "EUR",
+            "starRating": 5,
+            "description": {
+                "short": "This fictional example hotel allows you to experience all the content, rates and features the Impala platform (https://impala.travel) has to offer. Testing with this hotel allows you to experience the full breadth of functionality and rate options hotels might offer on Impala – and to ensure your app displays everything correctly."
+            },
+            "phoneNumbers": [
+                "+4561234567"
+            ],
+            "emails": [
+                "gdapi-staging-hotel+0e25533a-2db2-4894-9db1-4c1ff92d798c@getimpala.com"
+            ],
+            "websiteUrl": null,
+            "images": [
+                {
+                    "altText": null,
+                    "height": 1536,
+                    "width": 2884,
+                    "url": "https://cdn.impala.travel/properties/ckiuattho00013e6ar0tiilgt.jpg",
+                    "isHeroImage": true
+                },
+                {
+                    "altText": null,
+                    "height": 2461,
+                    "width": 3072,
+                    "url": "https://cdn.impala.travel/properties/ckiuavcvm00023e6aordygdiy.jpg",
+                    "isHeroImage": false
+                },
+                {
+                    "altText": null,
+                    "height": 3640,
+                    "width": 2912,
+                    "url": "https://cdn.impala.travel/properties/ckiuavvr100033e6ajep6w5dl.jpg",
+                    "isHeroImage": false
+                },
+                {
+                    "altText": null,
+                    "height": 2848,
+                    "width": 4288,
+                    "url": "https://cdn.impala.travel/properties/ckiuawdeo00043e6ajyqc70nm.jpg",
+                    "isHeroImage": false
+                },
+                {
+                    "altText": null,
+                    "height": 3072,
+                    "width": 4608,
+                    "url": "https://cdn.impala.travel/properties/ckiuawt9y00053e6a76l0qgqe.jpg",
+                    "isHeroImage": false
+                }
+            ],
+            "address": {
+                "line1": "456 Impala Street",
+                "line2": null,
+                "city": "Impalaland",
+                "postalCode": "0987-654",
+                "region": "Impalaland Beach",
+                "country": "GBR",
+                "countryName": "United Kingdom of Great Britain and Northern Ireland"
+            },
+            "location": {
+                "longitude": -9.952549,
+                "latitude": 58.386186
+            },
+            "amenities": [
+                {
+                    "code": 5,
+                    "formatted": "Air conditioning"
+                },
+                {
+                    "code": 7,
+                    "formatted": "ATM/Cash machine"
+                },
+                {
+                    "code": 8,
+                    "formatted": "Baby sitting"
+                },
+                {
+                    "code": 9,
+                    "formatted": "BBQ/Picnic area"
+                },
+                {
+                    "code": 14,
+                    "formatted": "Business library"
+                },
+                {
+                    "code": 16,
+                    "formatted": "Casino"
+                },
+                {
+                    "code": 22,
+                    "formatted": "Concierge desk"
+                }
+            ],
+            "roomCount": 200,
+            "checkIn": {
+                "from": "15:00"
+            },
+            "checkOut": {
+                "to": "12:00"
+            },
+            "termsAndConditions": "",
+            "createdAt": "2020-12-18T13:29:22.865Z",
+            "updatedAt": "2021-02-17T09:07:41.615Z",
+            "externalUrls": [],
+            "roomTypes": [
+                {
+                    "roomTypeId": "7b4e914f-0551-4fdc-b349-db3c32c5afed",
+                    "name": "Single Room",
+                    "description": "This is a fictional example room type that you can use to test all the features you might encounter on any hotel available on the Impala platform on the Impala platform (https://impala.travel). Testing with this room type means your app or site will be able to handle any values that you might find on Impala.",
+                    "maxOccupancy": 1,
+                    "rates": [
+                        {
+                            "rateId": "0e81a3a2b07e88bd3acd79f0b889c3ee:582dd2d20b2a806de46e610d962c0673f1975dfc4a2293bebeeec0b52822a92c",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 1,
+                            "hotelAgreement": null,
+                            "retailRate": {
+                                "total": {
+                                    "amount": 30000,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.622",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 30000,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "rateId": "2efb1a30a3546108e20de94fca2ab658:a62dd8e9b245d4374af6170ae2366c7821a13b2807b987880b844abf5d1324bd",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 1,
+                            "hotelAgreement": {
+                                "hotelAgreementId": "A11439",
+                                "dealId": "D2219",
+                                "conditions": [
+                                    "PRIVATE_RATE"
+                                ],
+                                "discount": {
+                                    "count": 5,
+                                    "type": "PERCENTAGE"
+                                },
+                                "specialInstructions": null,
+                                "href": "v1/deal-requests/D2219/agreements/A11439"
+                            },
+                            "retailRate": {
+                                "total": {
+                                    "amount": 28500,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.623",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 28500,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "amenities": [
+                        {
+                            "code": 228,
+                            "formatted": "Slippers"
+                        },
+                        {
+                            "code": 11,
+                            "formatted": "Bathroom amenities (free toiletries)"
+                        },
+                        {
+                            "code": 15,
+                            "formatted": "Bath or Shower"
+                        },
+                        {
+                            "code": 28,
+                            "formatted": "Desk"
+                        },
+                        {
+                            "code": 50,
+                            "formatted": "Hairdryer"
+                        },
+                        {
+                            "code": 69,
+                            "formatted": "Minibar"
+                        },
+                        {
+                            "code": 85,
+                            "formatted": "Private bathroom"
+                        },
+                        {
+                            "code": 123,
+                            "formatted": "Wireless internet connection"
+                        },
+                        {
+                            "code": 144,
+                            "formatted": "Soundproofed room"
+                        },
+                        {
+                            "code": 210,
+                            "formatted": "Satellite television"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "altText": null,
+                            "height": 3255,
+                            "width": 4890,
+                            "url": "https://cdn.impala.travel/area-types/ckiub6h8c00093e6ag7kufw24.jpg"
+                        }
+                    ]
+                },
+                {
+                    "roomTypeId": "280b6f5a-c645-44c0-a63d-03f1d7bc3d55",
+                    "name": "Junior Suite",
+                    "description": "This is a fictional example room type that you can use to test all the features you might encounter on any hotel available on the Impala platform on the Impala platform (https://impala.travel). Testing with this room type means your app or site will be able to handle any values that you might find on Impala.",
+                    "maxOccupancy": 2,
+                    "rates": [
+                        {
+                            "rateId": "744faeec4e8ccc6b0ce4eee8ba9a938f:65ea1e7750fe79392fec19ab2615eda8f368caa49a010da5ad790566d530e169",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 2,
+                            "hotelAgreement": null,
+                            "retailRate": {
+                                "total": {
+                                    "amount": 30000,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.622",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 30000,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "rateId": "9bd66c7da69b86eea4294d889b620ba4:b7b7fae45d4b465c70afd56bad51acc4ab6a84518aa65b23364abddfb5c89a29",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 2,
+                            "hotelAgreement": {
+                                "hotelAgreementId": "A11439",
+                                "dealId": "D2219",
+                                "conditions": [
+                                    "PRIVATE_RATE"
+                                ],
+                                "discount": {
+                                    "count": 5,
+                                    "type": "PERCENTAGE"
+                                },
+                                "specialInstructions": null,
+                                "href": "v1/deal-requests/D2219/agreements/A11439"
+                            },
+                            "retailRate": {
+                                "total": {
+                                    "amount": 28500,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.623",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 28500,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "amenities": [
+                        {
+                            "code": 228,
+                            "formatted": "Slippers"
+                        },
+                        {
+                            "code": 123,
+                            "formatted": "Wireless internet connection"
+                        },
+                        {
+                            "code": 210,
+                            "formatted": "Satellite television"
+                        },
+                        {
+                            "code": 144,
+                            "formatted": "Soundproofed room"
+                        },
+                        {
+                            "code": 11,
+                            "formatted": "Bathroom amenities (free toiletries)"
+                        },
+                        {
+                            "code": 15,
+                            "formatted": "Bath or Shower"
+                        },
+                        {
+                            "code": 28,
+                            "formatted": "Desk"
+                        },
+                        {
+                            "code": 50,
+                            "formatted": "Hairdryer"
+                        },
+                        {
+                            "code": 69,
+                            "formatted": "Minibar"
+                        },
+                        {
+                            "code": 85,
+                            "formatted": "Private bathroom"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "altText": null,
+                            "height": 3024,
+                            "width": 4032,
+                            "url": "https://cdn.impala.travel/area-types/ckiub0igb00063e6am6q2b0w3.jpg"
+                        }
+                    ]
+                },
+                {
+                    "roomTypeId": "1bd16eed-e10f-47f6-8f28-67c40deb4f3b",
+                    "name": "Presidential Suite",
+                    "description": "This is a fictional example room type that you can use to test all the features you might encounter on any hotel available on the Impala platform on the Impala platform (https://impala.travel). Testing with this room type means your app or site will be able to handle any values that you might find on Impala.",
+                    "maxOccupancy": 4,
+                    "rates": [
+                        {
+                            "rateId": "511290b9bb2f9910394389df446edbb8:7ff2eab67e374274b6df38457ae3db89b567ba336efb471d341653c82ca85685",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 4,
+                            "hotelAgreement": null,
+                            "retailRate": {
+                                "total": {
+                                    "amount": 30000,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.622",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 30000,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "rateId": "e3c5a26674c32a4dea0120a62dbe1916:406a3485d154c33a53e28a24c4af4fdaceb0e3b37125ca714386b718e52fd377",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 4,
+                            "hotelAgreement": {
+                                "hotelAgreementId": "A11439",
+                                "dealId": "D2219",
+                                "conditions": [
+                                    "PRIVATE_RATE"
+                                ],
+                                "discount": {
+                                    "count": 5,
+                                    "type": "PERCENTAGE"
+                                },
+                                "specialInstructions": null,
+                                "href": "v1/deal-requests/D2219/agreements/A11439"
+                            },
+                            "retailRate": {
+                                "total": {
+                                    "amount": 28500,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.623",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 28500,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "amenities": [
+                        {
+                            "code": 228,
+                            "formatted": "Slippers"
+                        },
+                        {
+                            "code": 144,
+                            "formatted": "Soundproofed room"
+                        },
+                        {
+                            "code": 123,
+                            "formatted": "Wireless internet connection"
+                        },
+                        {
+                            "code": 85,
+                            "formatted": "Private bathroom"
+                        },
+                        {
+                            "code": 69,
+                            "formatted": "Minibar"
+                        },
+                        {
+                            "code": 50,
+                            "formatted": "Hairdryer"
+                        },
+                        {
+                            "code": 28,
+                            "formatted": "Desk"
+                        },
+                        {
+                            "code": 15,
+                            "formatted": "Bath or Shower"
+                        },
+                        {
+                            "code": 11,
+                            "formatted": "Bathroom amenities (free toiletries)"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "altText": null,
+                            "height": 4480,
+                            "width": 6720,
+                            "url": "https://cdn.impala.travel/area-types/ckiub3dw100073e6alkifv3ok.jpg"
+                        }
+                    ]
+                },
+                {
+                    "roomTypeId": "8cb8ce9e-221a-4220-a358-35b6852fb359",
+                    "name": "Double Room",
+                    "description": "This is a fictional example room type that you can use to test all the features you might encounter on any hotel available on the Impala platform on the Impala platform (https://impala.travel). Testing with this room type means your app or site will be able to handle any values that you might find on Impala.",
+                    "maxOccupancy": 2,
+                    "rates": [
+                        {
+                            "rateId": "f6d8bdf3d448c0a7f04e7c99c6b4f033:3699832053e4d6f5ece2b81e2c024f897fad5afa80ebda4a7503ee6b46b531c2",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 2,
+                            "hotelAgreement": null,
+                            "retailRate": {
+                                "total": {
+                                    "amount": 30000,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.622",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 30000,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "rateId": "442a1efc74844b357b37cbe7212ce286:d9b1a052f3a8222838f7214787945ad05d7a25d37de08202ed551bd8f84ac23d",
+                            "start": "2021-09-03",
+                            "end": "2021-09-05",
+                            "maxOccupancy": 2,
+                            "hotelAgreement": {
+                                "hotelAgreementId": "A11439",
+                                "dealId": "D2219",
+                                "conditions": [
+                                    "PRIVATE_RATE"
+                                ],
+                                "discount": {
+                                    "count": 5,
+                                    "type": "PERCENTAGE"
+                                },
+                                "specialInstructions": null,
+                                "href": "v1/deal-requests/D2219/agreements/A11439"
+                            },
+                            "retailRate": {
+                                "total": {
+                                    "amount": 28500,
+                                    "currency": {
+                                        "code": "EUR"
+                                    }
+                                },
+                                "taxesAndFees": {
+                                    "includedInRate": [],
+                                    "payAtHotel": []
+                                }
+                            },
+                            "sellerCommissionPercentage": 10,
+                            "components": [
+                                {
+                                    "formatted": "Breakfast",
+                                    "type": "BREAKFAST",
+                                    "includedInRate": true
+                                }
+                            ],
+                            "cancellationPolicies": [
+                                {
+                                    "formatted": "Fully refundable until September 2, 2021 23:59",
+                                    "start": "2021-08-24 06:37:18.623",
+                                    "end": "2021-09-02 23:59:59.999",
+                                    "fee": {
+                                        "type": "NONE",
+                                        "price": {
+                                            "amount": 0,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "formatted": "Non-refundable after September 3, 2021 00:00",
+                                    "start": "2021-09-03 00:00:00.000",
+                                    "fee": {
+                                        "type": "PERCENTAGE",
+                                        "count": 100,
+                                        "price": {
+                                            "amount": 28500,
+                                            "currency": {
+                                                "code": "EUR"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "amenities": [
+                        {
+                            "code": 2,
+                            "formatted": "Air conditioning"
+                        },
+                        {
+                            "code": 228,
+                            "formatted": "Slippers"
+                        },
+                        {
+                            "code": 210,
+                            "formatted": "Satellite television"
+                        },
+                        {
+                            "code": 144,
+                            "formatted": "Soundproofed room"
+                        },
+                        {
+                            "code": 123,
+                            "formatted": "Wireless internet connection"
+                        },
+                        {
+                            "code": 85,
+                            "formatted": "Private bathroom"
+                        },
+                        {
+                            "code": 69,
+                            "formatted": "Minibar"
+                        },
+                        {
+                            "code": 50,
+                            "formatted": "Hairdryer"
+                        },
+                        {
+                            "code": 28,
+                            "formatted": "Desk"
+                        },
+                        {
+                            "code": 15,
+                            "formatted": "Bath or Shower"
+                        },
+                        {
+                            "code": 11,
+                            "formatted": "Bathroom amenities (free toiletries)"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "altText": null,
+                            "height": 6000,
+                            "width": 4000,
+                            "url": "https://cdn.impala.travel/area-types/ckiub4vym00083e6amqnt3a6u.jpg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "pagination": {
+        "count": 2,
+        "total": 2,
+        "next": null,
+        "prev": null
+    }
+}
