@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: #F0F3F5;
+}
+
+.mainBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 22px;
+}
+
+.left {
+    flex-grow: 1;
+    /* background: #FFF; */
+}
+
+.right {
+    width: 160px;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import MainHotel from './Components/MainHotel'
 
 const App = () => {
     return (
         <div>
-            <h1>Hello World!</h1>
+            <MainHotel />
         </div>
     )
 }
