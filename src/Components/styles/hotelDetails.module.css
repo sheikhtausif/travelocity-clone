@@ -62,10 +62,17 @@
 
 /* ! Hotel Overview */
 
-.more {
+.more, .more+span {
     color: #2A6EC1;
     cursor: pointer;
     font-size: 14px;
+    align-self: center;
+}
+
+.more+span {
+    margin-top: 3.5px;
+    margin-left: -8px;
+    font-size: 18px;
 }
 
 .grid {

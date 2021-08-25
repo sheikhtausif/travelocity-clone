@@ -30,7 +30,7 @@ const HotelOverview = ({ hotelData }) => {
                     <p style={{ color: 'grey', fontSize: '14px' }}>Guests rated this property 4.7/5 for cleanliness.</p>
                     <Box className={styles.flex_1}>
                         <p className={styles.more}> {Math.floor((Math.random() * 1000) + 1)} reviews </p>
-                        <MdNavigateNext />
+                        <span><MdNavigateNext /></span>
                     </Box>
                 </div>
                 <div className={styles.amenities}>
@@ -55,7 +55,7 @@ const HotelOverview = ({ hotelData }) => {
                     </Box>
                     <Box className={styles.flex_1}>
                         <p className={styles.more}>See all</p>
-                        <MdNavigateNext />
+                        <span><MdNavigateNext /></span>
                     </Box>
                 </div>
                 <div className={styles.amenities_2}>
@@ -90,7 +90,7 @@ const HotelOverview = ({ hotelData }) => {
                     </Box>
                     <Box className={styles.flex_1}>
                         <p className={styles.more}>See all</p>
-                        <MdNavigateNext />
+                        <span><MdNavigateNext /></span>
                     </Box>
                 </div>
                 <div className={styles.safety_2}>

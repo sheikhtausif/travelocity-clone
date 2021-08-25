@@ -8,6 +8,7 @@
     grid-template-columns: 32% 32% 32%;
     grid-template-rows: auto auto auto;
     gap: 10px;
+    letter-spacing: 1px;
 }
 
 .room_div {
@@ -40,10 +41,54 @@
     cursor: pointer;
 }
 
+.more, .more+span {
+    color: #2A6EC1;
+    cursor: pointer;
+}
+
+.more+span {
+    margin-top: 3.5px;
+    margin-left: -8px;
+    font-size: 18px;
+}
+
 .flex_1 {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 14px;
     color: grey;
+}
+
+.line {
+    border-bottom: 1px solid rgb(143, 141, 141);
+    margin: 16px auto;
+}
+
+.flex_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: grey;
+}
+
+.h3_price {
+    margin-top: 40px;
+}
+
+.flex_small {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.flex_2>button {
+    padding: 8px 16px;
+    background: #2A6EC1;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
 }
