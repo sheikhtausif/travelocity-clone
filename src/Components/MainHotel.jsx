@@ -12,6 +12,8 @@ const MainHotel = () => {
                 </div>
                 <div className={styles.right}>
                     <Ads />
+                    <Ads />
+                    <Ads />
                     <Ads style={{ position: 'fixed', top: '50', }} />
                 </div>
             </div>

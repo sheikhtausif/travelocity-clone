@@ -1,4 +1,5 @@
 import React from 'react'
+import AboutArea from './AboutArea'
 // import HotelMap from './HotelMap'
 import HotelOverview from './HotelOverview'
 import Rooms from './Rooms'
@@ -59,6 +60,8 @@ const HotelDetails = () => {
             {hotelData.length > 0 ? <div className={styles.gridRoom}>
                 <Rooms hotelData={hotelData[0]} />
             </div> : <h1>Loading...</h1>}
+
+            <AboutArea />
 
         </>
     )
