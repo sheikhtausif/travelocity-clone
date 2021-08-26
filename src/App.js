@@ -1,11 +1,10 @@
-import React from 'react'
-import { HomePage } from './components/HomePage/Home'
+import React from 'react';
+import { MainHomePage } from './pages/Home_page';
 
 const App = () => {
     return (
         <div>
-            {/* <StaticDateRangePickerDemo /> */}
-            <HomePage />
+            <MainHomePage />
         </div>
     )
 }
