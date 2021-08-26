@@ -1,10 +1,10 @@
 import React from 'react';
-import { MainHomePage } from './pages/Home_page';
+import { RoutesPage } from './routes/Routes';
 
 const App = () => {
     return (
         <div>
-            <MainHomePage />
+            <RoutesPage />
         </div>
     )
 }
