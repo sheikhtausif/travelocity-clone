@@ -17,13 +17,13 @@ export default function MaterialUIPickers({ props, type, startDate }) {
             props.handleEndDate(selectedDate);
         }
 
-    }, [selectedDate])
+    }, [selectedDate, props, type])
 
     useEffect(() => {
         if (type === "checkOut") {
             setMinStartDate(startDate);
         }
-    }, [startDate])
+    }, [startDate, props, type])
 
 
     const renderInput = (props) => (

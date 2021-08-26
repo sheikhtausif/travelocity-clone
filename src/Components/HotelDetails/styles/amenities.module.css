@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.amenities_div, .policies_div {
+    background: #FFF;
+    border-radius: 12px;
+    padding: 22px 14px;
+    margin-top: 20px;
+}
+
+.amenities, .policies {
+    letter-spacing: 1px;
+    display: flex;
+    gap: 30px;
+}
+
+.left {
+    width: 25%;
+}
+
+.mid, .right {
+    width: 35%;
+}
+
+.flex_1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.amenities p, .policies p {
+    font-size: 13px;
+    color: #505c66;
+    margin-bottom: 8px;
+}
+
+.policies h4 {
+    margin-bottom: 12px;
+}
+
+.line {
+    border-bottom: 1px solid rgb(143, 141, 141);
+    margin: 20px auto;
+}
+
+/* ! policies */
+
+.right_2 {
+    width: 65%;
+}
+
+.margin {
+    margin-top: 20px;
+}
+
+.flex_card {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+}
+
+.flex_card>:nth-child(n) {
+    font-size: 50px;
+    color: #2A6EC1;
+    height: inherit;
+}

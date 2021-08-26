@@ -3499,7 +3499,7 @@
         {
             "hotelId": "0be271fb-7b1e-4740-8937-6aa26af8a256",
             "name": "Hotel Bahía",
-            "price" : 250,
+            "price": 250,
             "currency": "EUR",
             "starRating": 4,
             "description": {
@@ -4665,7 +4665,7 @@
             "hotelId": "351d12df-dc79-49b0-ae2d-75fbd45edd40",
             "name": "Hotel Hoyuela",
             "currency": "EUR",
-            "price" : 220,
+            "price": 220,
             "starRating": 4,
             "description": {
                 "short": "Hotel Hoyuela Santander was erected following the Cour Jardin style at the height of the splendour of Avenida de los Hoteles, where it’s located. Its classic and elegant design and modern facilities make this accommodation truly unique."
@@ -6666,7 +6666,7 @@
             "hotelId": "eb291aed-dc30-4ff5-a952-dd6666a1596b",
             "name": "Aegean Village Beachfront Resort",
             "currency": "EUR",
-            "price" : 369,
+            "price": 369,
             "starRating": 4,
             "description": {
                 "short": "Located just above a secluded beach, Kastelia in Karpathos, Aegean Village Beachfront Resort features a buffet breakfast, restaurant and pool bar. "
