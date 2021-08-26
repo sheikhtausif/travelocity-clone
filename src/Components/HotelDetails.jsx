@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutArea from './AboutArea'
+import Amenities from './Amenities'
 // import HotelMap from './HotelMap'
 import HotelOverview from './HotelOverview'
 import Rooms from './Rooms'
@@ -62,6 +63,8 @@ const HotelDetails = () => {
             </div> : <h1>Loading...</h1>}
 
             <AboutArea />
+
+            <Amenities />
 
         </>
     )
