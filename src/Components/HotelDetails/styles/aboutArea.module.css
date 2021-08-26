@@ -1,13 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .about_area {
-    letter-spacing: 1px;
     border-radius: 12px;
     background: #FFF;
-    padding: 22px 14px 100px 14px;
+    padding: 22px 14px 40px 14px;
     margin: 20px 0;
 }
 
