@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import StarRateIcon from "@material-ui/icons/StarRate";
+import logo from "../../logo.svg";
 import {
   FormControlLabel,
   makeStyles,
@@ -11,6 +12,7 @@ import {
   Button,
   FormControl,
   RadioGroup,
+  CircularProgress,
 } from "@material-ui/core";
 import { useCallback } from "react";
 import { SearchByProperty } from "./Filters/SearchByProperty";
@@ -20,6 +22,8 @@ import { PaymentType } from "./Filters/PaymentType";
 import { PropertyType } from "./Filters/PropertyType";
 import { PopularLocation } from "./Filters/PopularLocation";
 import { Mealplans } from "./Filters/MealPlans";
+import { useHistory } from "react-router";
+// import { useAxios } from "../../Hooks/useAxios";
 
 const useStyle = makeStyles({
   button: {
@@ -51,13 +55,33 @@ const Wrapper = styled.div`
     flex-direction: column;
     color: #505c66;
   }
+
+  .progress {
+    width: 20%;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .progress > img {
+    width: 100px;
+  }
 `;
 
 export const HotelList = () => {
+  // const { hotelData } = useAxios("http://localhost:3001/data");
   const [hotels, setHotels] = useState([]);
   const [data, setData] = useState([]);
+  const [loading, setloading] = useState(false);
   const classes = useStyle();
   const [priceFilter, setPriceFilter] = useState("");
+  const history = useHistory();
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   const handleChange = (event) => {
     const range = event.target.value.split(" ").map(Number);
     setPriceFilter(event.target.value);
@@ -65,39 +89,55 @@ export const HotelList = () => {
   };
 
   const handlePriceFilter = (a, b) => {
+    setloading(true);
     const newData = data.filter((item) => {
       return item.price >= a && item.price < b;
     });
 
     setHotels(newData);
+    setTimeout(() => {
+      setloading(false);
+    }, 2000);
   };
 
   const getData = () => {
+    setloading(true);
     axios
       .get("http://localhost:3001/data")
       .then((res) => {
         setData(res.data);
         setHotels(res.data);
+        setTimeout(() => {
+          setloading(false);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // console.log(hotelData);
 
   const handleStar = useCallback(
     (star) => {
+      setloading(true);
       const newData = data.filter((item) => {
         return item.starRating === star;
       });
 
       setHotels(newData);
+
+      setTimeout(() => {
+        setloading(false);
+      }, 2000);
     },
     [data]
   );
+
+  const handleOpenHotel = (id) => {
+    console.log(id);
+    history.push(`/hotels/${id}`);
+  };
 
   return (
     <>
@@ -216,9 +256,22 @@ export const HotelList = () => {
         {/*------------------------------------------------------------------------------------------>>>>>> Hotel List  */}
 
         <div className="list">
-          {hotels.map((item) => {
-            return <Hotelcard key={item.hotelId} data={item} />;
-          })}
+          {loading ? (
+            <div className="progress">
+              <img src={logo} alt="" />
+              <CircularProgress />
+            </div>
+          ) : (
+            hotels.map((item) => {
+              return (
+                <Hotelcard
+                  handleOpenHotel={handleOpenHotel}
+                  key={item.hotelId}
+                  data={item}
+                />
+              );
+            })
+          )}
         </div>
       </Wrapper>
     </>

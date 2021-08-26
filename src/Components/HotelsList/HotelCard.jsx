@@ -85,10 +85,13 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Hotelcard = ({ data }) => {
-  console.log(data.price);
+export const Hotelcard = ({ data, handleOpenHotel }) => {
   return (
-    <Wrapper>
+    <Wrapper
+      onClick={() => {
+        handleOpenHotel(data.hotelId);
+      }}
+    >
       <img className="card-image" src={data.images[1].url} alt="" />
       <div className="hotel-detail">
         <div>

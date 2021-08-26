@@ -9,7 +9,7 @@ export function RoutesPage() {
       <Switch>
         <Route exact path="/" component={MainHomePage} />
         <Route exact path="/hotels" component={HotelsListPage} />
-        <Route exact path="/hotel" component={MainHotelPage} />
+        <Route exact path="/hotels/:id" component={MainHotelPage} />
       </Switch>
     </div>
   );
