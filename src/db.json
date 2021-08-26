@@ -2,13 +2,13 @@
     "data": [
         {
             "hotelId": "3faf8507-307f-4846-936c-a1465b3cfc42",
-            "name": "Royal Palm Beach Resort [SANDBOX]",
+            "name": "Royal Palm Beach Resort",
             "currency": "ANG",
+            "price": 189,
             "starRating": 3,
             "description": {
                 "short": "How would you like to spend a week or longer with a beautiful, white sandy beach right at your doorstep? You can, when you stay at Royal Palm Beach Resort on Saint Martin/Saint Maarten in the Caribbean. Just imagine strolling along the gorgeous beach, swimming in the sparkling blue waters, and just relaxing by the pool at the resort.  If you are looking for the ultimate in relaxing vacations, you will find it at Royal Palm Beach Resort."
             },
-            "price":900,
             "phoneNumbers": [
                 "888.249.8810"
             ],
@@ -518,13 +518,13 @@
         },
         {
             "hotelId": "f14de8c1-57be-4333-9a37-f13acc77836c",
-            "name": "Flamingo Beach Resort [SANDBOX]",
+            "name": "Flamingo Beach Resort",
             "currency": "ANG",
+            "price": 350,
             "starRating": 3,
             "description": {
                 "short": "Beautiful white sand, sparkling blue waters, sunny skies - where else can you find all of this but in Saint Martin/Saint Maarten in the Caribbean? When you stay at Flamingo Beach Resort, you will have all of this, and more. Here you can have the most relaxing vacation of your life, or enjoy some of the many outdoor adventures in the area. If you love water sports, you can go windsurfing, swimming and snorkeling. "
             },
-            "price":900,
             "phoneNumbers": [
                 "1.800.438.2929"
             ],
@@ -1127,13 +1127,13 @@
         },
         {
             "hotelId": "f63b534a-d39d-4199-ba47-32650695102b",
-            "name": "Gran Hotel Sardinero [SANDBOX]",
+            "name": "Gran Hotel Sardinero",
             "currency": "EUR",
+            "price": 199,
             "starRating": 4,
             "description": {
                 "short": "In a unique reconstructed and renovated building in an enviable location, Gran Hotel Sardinero is the perfect starting point for exploring Santander’s cultural, leisure and business activities."
             },
-            "price":900,
             "phoneNumbers": [
                 "+34 942 27 11 00"
             ],
@@ -2469,13 +2469,13 @@
         },
         {
             "hotelId": "85b17e87-7928-4ef0-897c-f7d2d056bb71",
-            "name": "Hotel degli Orafi [SANDBOX]",
+            "name": "Hotel degli Orafi",
             "currency": "EUR",
+            "price": 255,
             "starRating": 4,
             "description": {
                 "short": "The Hotel degli Orafi is a prestigious building in the historic centre of Florence and offers you a wide range of services and comforts.\n\nAs soon as you arrive you will find yourself in a welcoming and warm atmosphere were you will immediately be taken care of by our multilingual staff in the reception. You will be offered a \"Welcome Drink\" to enjoy on our beautiful roof terrace bar. "
             },
-            "price":900,
             "phoneNumbers": [
                 "+39 055 26622"
             ],
@@ -3498,13 +3498,13 @@
         },
         {
             "hotelId": "0be271fb-7b1e-4740-8937-6aa26af8a256",
-            "name": "Hotel Bahía [SANDBOX]",
+            "name": "Hotel Bahía",
+            "price": 250,
             "currency": "EUR",
             "starRating": 4,
             "description": {
                 "short": "Hotel Bahía was opened in Santander in 1999, recuperating the hotel’s former splendour of being the hotel of choice for the most significant events on the social, cultural and financial events in the capital of Cantabria. The hotel offers excellent views over the Bay of Santander, a peaceful setting where you can enjoy a few days of relaxation. "
             },
-            "price":900,
             "phoneNumbers": [
                 "+34 94 220 50 00"
             ],
@@ -4663,13 +4663,13 @@
         },
         {
             "hotelId": "351d12df-dc79-49b0-ae2d-75fbd45edd40",
-            "name": "Hotel Hoyuela [SANDBOX]",
+            "name": "Hotel Hoyuela",
             "currency": "EUR",
+            "price": 220,
             "starRating": 4,
             "description": {
                 "short": "Hotel Hoyuela Santander was erected following the Cour Jardin style at the height of the splendour of Avenida de los Hoteles, where it’s located. Its classic and elegant design and modern facilities make this accommodation truly unique."
             },
-            "price":900,
             "phoneNumbers": [
                 "+34 942 28 26 28"
             ],
@@ -5205,13 +5205,13 @@
         },
         {
             "hotelId": "43d4a831-71bf-41cf-8e6f-a8451d7cabbb",
-            "name": "Hotel Sardinero Madrid [SANDBOX]",
+            "name": "Hotel Sardinero Madrid",
             "currency": "EUR",
+            "price": 155,
             "starRating": 4,
             "description": {
                 "short": "The perfect balance between history and modernity.\n\nA historic building which has been renovated to include the most up-to-date facilities and the latest technology. The hotel is located in the emblematic Chamberí district and benefits from good connections with the rest of the city."
             },
-            "price":900,
             "phoneNumbers": [
                 "+34 912 06 21 60"
             ],
@@ -5646,13 +5646,13 @@
         },
         {
             "hotelId": "0a809629-a2b4-454f-ba41-340b57747c40",
-            "name": "Dolomeet Boutique Hotel [SANDBOX]",
+            "name": "Dolomeet Boutique Hotel",
             "currency": "EUR",
+            "price": 129,
             "starRating": 4,
             "description": {
                 "short": "Surrounded by the untouched nature of the Dolomites, in the centre of Pinzolo, away from traffic and not far from Madonna di Campiglio and the ski lifts, the Dolomeet Boutique Hotel is a unique place full of peace and harmony that will give you an exclusive holiday you will not forget."
             },
-            "price":900,
             "phoneNumbers": [
                 "+39 0465 503 902"
             ],
@@ -6664,13 +6664,13 @@
         },
         {
             "hotelId": "eb291aed-dc30-4ff5-a952-dd6666a1596b",
-            "name": "Aegean Village Beachfront Resort  [SANDBOX]",
+            "name": "Aegean Village Beachfront Resort",
             "currency": "EUR",
+            "price": 369,
             "starRating": 4,
             "description": {
                 "short": "Located just above a secluded beach, Kastelia in Karpathos, Aegean Village Beachfront Resort features a buffet breakfast, restaurant and pool bar. "
             },
-            "price":900,
             "phoneNumbers": [
                 "+30 2245 081195"
             ],
@@ -7243,13 +7243,13 @@
         },
         {
             "hotelId": "9d00ef07-543b-4ebc-829f-fdaca5c3275c",
-            "name": "Hotel AS Hotels Altube [SANDBOX]",
+            "name": "Hotel AS Hotels Altube",
             "currency": "EUR",
+            "price": 429,
             "starRating": 2,
             "description": {
                 "short": "At km 36 of the AP-68, on their way through Zuia, Álava, is the AS Hotels Altube , a nice and cozy 2 star hotel 20 km from Vitoria and 40 Bilbao ideal for travelers en route for leisure or business in the Basque Country. The place has 20 rooms bright, with attention to every detail and equipped with all facilities you need to have a pleasant and carefree. "
             },
-            "price":900,
             "phoneNumbers": [
                 "+34 945430173"
             ],
@@ -7588,13 +7588,13 @@
         },
         {
             "hotelId": "6ba6ee9d-23be-4587-86ca-59478456a6aa",
-            "name": "Hotel Porta Faenza [SANDBOX]",
+            "name": "Hotel Porta Faenza",
             "currency": "EUR",
+            "price": 499,
             "starRating": 3,
             "description": {
                 "short": "The Hotel Porta Faenza is centrally located, very close to the main railway station (Santa Maria Novella), to Palazzo dei Congressi (the Conference Centre) and to the Fortezza da Basso. The most interesting monuments and museums in Florence are within easy walking distance.\n\nThe Hotel will make you savour the warm atmosphere of the old-time Florentine houses: the tile floor, the exposed beams, the old tools scattered everywhere, together with all the comforts will make it your ideal home in the old Florence.\n\nFor being situated in a pedestrian precinct, the Hotel is a quiet and pleasant place, the ideal point of departure for you to discover Florence and its artistic and cultural life."
             },
-            "price":900,
             "phoneNumbers": [
                 "+39 055 217975"
             ],
@@ -8540,13 +8540,13 @@
         },
         {
             "hotelId": "0e25533a-2db2-4894-9db1-4c1ff92d798c",
-            "name": "Impala All-Inclusive Always Available Resort (Example Hotel) [SANDBOX]",
+            "name": "Impala All-Inclusive Always Available Resort",
             "currency": "EUR",
+            "price": 300,
             "starRating": 5,
             "description": {
                 "short": "This fictional example hotel allows you to experience all the content, rates and features the Impala platform (https://impala.travel) has to offer. Testing with this hotel allows you to experience the full breadth of functionality and rate options hotels might offer on Impala – and to ensure your app displays everything correctly."
             },
-            "price":900,
             "phoneNumbers": [
                 "+4561234567"
             ],
