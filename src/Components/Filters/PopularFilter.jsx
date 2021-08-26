@@ -4,6 +4,7 @@ import {
   FormControlLabel,
   Checkbox,
 } from "@material-ui/core";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -21,38 +22,49 @@ const Wrapper = styled.div`
 `;
 
 export const PopularFilter = () => {
+  const [popular, setPopular] = useState("");
+  const handleChange = (event) => {
+    setPopular(event.target.value);
+    console.log(popular);
+  };
+
   return (
     <Wrapper>
       <div className="filter-title">Popular filter</div>
       <div className="popular-filter">
         <FormControl component="fieldset">
-          <FormGroup>
+          <FormGroup
+            aria-label="guest-rating"
+            name="guest-rating"
+            value={popular}
+            onChange={handleChange}
+          >
             <FormControlLabel
-              value="end"
+              value="breakfast"
               control={<Checkbox color="primary" />}
               label="Breakfast Included"
               labelPlacement="end"
             />
             <FormControlLabel
-              value="end"
+              value="ocean-view"
               control={<Checkbox color="primary" />}
               label="Ocean view"
               labelPlacement="end"
             />
             <FormControlLabel
-              value="end"
+              value="hotel-resort"
               control={<Checkbox color="primary" />}
               label="Hotel resort"
               labelPlacement="end"
             />
             <FormControlLabel
-              value="end"
+              value="hotel"
               control={<Checkbox color="primary" />}
               label="Hotel"
               labelPlacement="end"
             />
             <FormControlLabel
-              value="end"
+              value="villa"
               control={<Checkbox color="primary" />}
               label="Villa"
               labelPlacement="end"

@@ -7,8 +7,10 @@ import StarRateIcon from "@material-ui/icons/StarRate";
 import {
   FormControlLabel,
   makeStyles,
-  Checkbox,
+  Radio,
   Button,
+  FormControl,
+  RadioGroup,
 } from "@material-ui/core";
 import { useCallback } from "react";
 import { SearchByProperty } from "./Filters/SearchByProperty";
@@ -37,22 +39,6 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 30% 70%;
   grid-gap: 1.5rem;
-  //border: 1px solid red;
-
-  .sorting {
-    //border: 1px solid blue;
-  }
-
-  .search-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  .divider {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
 
   .filter-title {
     font-size: 1rem;
@@ -71,6 +57,20 @@ export const HotelList = () => {
   const [hotels, setHotels] = useState([]);
   const [data, setData] = useState([]);
   const classes = useStyle();
+  const [priceFilter, setPriceFilter] = useState("");
+  const handleChange = (event) => {
+    const range = event.target.value.split(" ").map(Number);
+    setPriceFilter(event.target.value);
+    handlePriceFilter(range[0], range[1]);
+  };
+
+  const handlePriceFilter = (a, b) => {
+    const newData = data.filter((item) => {
+      return item.price >= a && item.price < b;
+    });
+
+    setHotels(newData);
+  };
 
   const getData = () => {
     axios
@@ -78,7 +78,6 @@ export const HotelList = () => {
       .then((res) => {
         setData(res.data);
         setHotels(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -105,7 +104,7 @@ export const HotelList = () => {
       <Wrapper>
         <div className="sorting">
           <SearchByProperty />
-          <PopularFilter />
+
           {/* ---------------------------------------------------------------------------------------------------Star rating  */}
           <div className="filter-title">Star rating</div>
           <Button
@@ -163,40 +162,50 @@ export const HotelList = () => {
           >
             5
           </Button>
+
           {/* ------------------------------------------------------------------------------------------------------- Your Budget rating  */}
           <div className="filter-title">Your Budget</div>
           <div className="popular-filter">
-            <FormControlLabel
-              value="end"
-              control={<Checkbox color="primary" />}
-              label="Less than 75$"
-              labelPlacement="end"
-            />
-            <FormControlLabel
-              value="end"
-              control={<Checkbox color="primary" />}
-              label="75$ to 125$"
-              labelPlacement="end"
-            />
-            <FormControlLabel
-              value="end"
-              control={<Checkbox color="primary" />}
-              label="125$ to 200$"
-              labelPlacement="end"
-            />
-            <FormControlLabel
-              value="end"
-              control={<Checkbox color="primary" />}
-              label="200$ to 300$"
-              labelPlacement="end"
-            />
-            <FormControlLabel
-              value="end"
-              control={<Checkbox color="primary" />}
-              label="300$ and above"
-              labelPlacement="end"
-            />
+            <FormControl component="fieldset">
+              <RadioGroup
+                aria-label="guest-rating"
+                name="guest-rating"
+                value={priceFilter}
+                onChange={handleChange}
+              >
+                <FormControlLabel
+                  value="0 75"
+                  control={<Radio color="primary" />}
+                  label="Less than 75$"
+                />
+                <FormControlLabel
+                  value="75 125"
+                  control={<Radio color="primary" />}
+                  label="75$ to 125$"
+                  labelPlacement="end"
+                />
+                <FormControlLabel
+                  value="125 200"
+                  control={<Radio color="primary" />}
+                  label="125$ to 200$"
+                  labelPlacement="end"
+                />
+                <FormControlLabel
+                  value="200 300"
+                  control={<Radio color="primary" />}
+                  label="200$ to 300$"
+                  labelPlacement="end"
+                />
+                <FormControlLabel
+                  value="300 1000"
+                  control={<Radio color="primary" />}
+                  label="300$ and above"
+                  labelPlacement="end"
+                />
+              </RadioGroup>
+            </FormControl>
           </div>
+          <PopularFilter />
           <GuestRating />
           <PaymentType />
           <PropertyType />
@@ -208,7 +217,7 @@ export const HotelList = () => {
 
         <div className="list">
           {hotels.map((item) => {
-            return <Hotelcard data={item} />;
+            return <Hotelcard key={item.hotelId} data={item} />;
           })}
         </div>
       </Wrapper>

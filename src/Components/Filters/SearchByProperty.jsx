@@ -30,7 +30,7 @@ export const SearchByProperty = () => {
         id="outlined-basic"
         label="Property name"
         variant="outlined"
-        color="default"
+        color="primary"
       />
       <Divider className="divider" />
       <div className="search-title">Filter by</div>
