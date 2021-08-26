@@ -1,3 +1,5 @@
-export const HomeListPage = () => {
-  return;
+import { HotelList } from "../Components/HotelList";
+
+export const HotelsListPage = () => {
+  return <HotelList />;
 };

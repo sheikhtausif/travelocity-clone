@@ -86,6 +86,7 @@ const Wrapper = styled.div`
 `;
 
 export const Hotelcard = ({ data }) => {
+  console.log(data.price);
   return (
     <Wrapper>
       <img className="card-image" src={data.images[1].url} alt="" />
