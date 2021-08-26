@@ -5,7 +5,7 @@ import Amenities from './Amenities'
 import HotelOverview from './HotelOverview'
 import Rooms from './Rooms'
 import styles from './styles/hotelDetails.module.css'
-import { useAxios } from './useAxios'
+import { useAxios } from '../../Hooks/useAxios'
 
 const HotelDetails = () => {
 
@@ -59,7 +59,7 @@ const HotelDetails = () => {
             </div>
 
             {hotelData.length > 0 ? <div className={styles.gridRoom}>
-                <Rooms hotelData={hotelData[0]} />
+                <Rooms hotelData={hotelData[4]} />
             </div> : <h1>Loading...</h1>}
 
             <AboutArea />

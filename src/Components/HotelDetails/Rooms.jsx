@@ -13,6 +13,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import FreeBreakfastIcon from '@material-ui/icons/FreeBreakfast';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import DoneIcon from '@material-ui/icons/Done';
+import { RadioGroup } from '@material-ui/core';
 
 
 const Rooms = ({ hotelData }) => {
@@ -69,14 +70,16 @@ const Rooms = ({ hotelData }) => {
                         <div className={styles.line}></div>
                         <div className={styles.extra}>
                             <h4>Extras</h4>
-                            <Box className={styles.flex_2}>
-                                <FormControlLabel value="noExtra" control={<Radio color="primary" />} label="One-way airport transfer" />
-                                <p>+ $0</p>
-                            </Box>
-                            <Box className={styles.flex_2}>
-                                <FormControlLabel value="halfBoard" control={<Radio color="primary" />} label="Half Board" />
-                                <p>+ $118</p>
-                            </Box>
+                            <RadioGroup aria-label="price" name="price_1">
+                                <Box className={styles.flex_2}>
+                                    <FormControlLabel value="noExtra" control={<Radio color="primary" />} label="One-way airport transfer" />
+                                    <p>+ $0</p>
+                                </Box>
+                                <Box className={styles.flex_2}>
+                                    <FormControlLabel value="halfBoard" control={<Radio color="primary" />} label="Half Board" />
+                                    <p>+ $118</p>
+                                </Box>
+                            </RadioGroup>
                             <h3 className={styles.h3_price}>$2,241</h3>
                             <div className={styles.flex_2}>
                                 <div className={styles.flex_small}>

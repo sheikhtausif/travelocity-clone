@@ -65,6 +65,6 @@
 
 .flex_card>:nth-child(n) {
     font-size: 50px;
-    color: blue;
+    color: #2A6EC1;
     height: inherit;
 }
