@@ -1,9 +1,11 @@
 import React from 'react'
+import { HomePage } from './components/HomePage/Home'
 
 const App = () => {
     return (
         <div>
-            <h1>Hello World!</h1>
+            {/* <StaticDateRangePickerDemo /> */}
+            <HomePage />
         </div>
     )
 }
