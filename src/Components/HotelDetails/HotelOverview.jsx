@@ -19,7 +19,7 @@ import { MdNavigateNext } from 'react-icons/md';
 
 const HotelOverview = ({ hotelData }) => {
     // console.log('hotelData:', hotelData)
-
+    
     return (
         <>
             {hotelData ? <div className={styles.grid}>
@@ -27,7 +27,7 @@ const HotelOverview = ({ hotelData }) => {
                     <h1>{hotelData.name.replace('[SANDBOX]', '')}</h1>
                     <Rating name="size-small" defaultValue={null} disabled size="small" />
                     <h3>{hotelData.starRating}/5 {hotelData.starRating > 4 ? "Wonderful" : "Average"}</h3>
-                    <p style={{ color: 'grey', fontSize: '14px' }}>Guests rated this property 4.7/5 for cleanliness.</p>
+                    <p style={{ color: '#505c66', fontSize: '14px' }}>Guests rated this property 4.7/5 for cleanliness.</p>
                     <Box className={styles.flex_1}>
                         <p className={styles.more}> {Math.floor((Math.random() * 1000) + 1)} reviews </p>
                         <span><MdNavigateNext /></span>

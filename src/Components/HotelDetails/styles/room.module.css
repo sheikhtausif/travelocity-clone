@@ -5,7 +5,7 @@
 
 .room_grid {
     display: grid;
-    grid-template-columns: 32% 32% 32%;
+    grid-template-columns: 32.7% 32.7% 32.7%;
     grid-template-rows: auto auto auto;
     gap: 10px;
     letter-spacing: 1px;
@@ -20,6 +20,7 @@
 
 .room_div>img {
     width: 100%;
+    height: 200px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -33,7 +34,7 @@
 
 .room_details>small {
     font-size: 11.5px;
-    color: grey;
+    color: #505c66;
 }
 
 .green, .green+span {
@@ -57,7 +58,7 @@
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: grey;
+    color: #505c66;
 }
 
 .line {
@@ -70,7 +71,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    color: grey;
+    color: #505c66;
 }
 
 .h3_price {
