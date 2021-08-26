@@ -1,12 +1,11 @@
-
-import { HotelList } from './Components/HotelList'
-
+import React from 'react';
+import { RoutesPage } from './routes/Routes';
 
 const App = () => {
 
     return (
-        <div style={{background: "#f0f3f5"}}>
-            <HotelList/>
+        <div>
+            <RoutesPage />
         </div>
     )
 }
