@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 
 
 export function HomePage() {
-    // const classes = useStyles();
 
     return (
         <div className={styles.container}>
@@ -106,7 +105,14 @@ export function HomePage() {
                         <p>Traveling now or planning a trip for later? Let us help.</p>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     );
 }
+
+
+
+
+
+
+
