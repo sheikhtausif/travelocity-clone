@@ -6,20 +6,19 @@ import Fade from '@material-ui/core/Fade';
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
 import Home from '@material-ui/icons/Home';
-
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
-    menuAdjustings: {
+
+const useStyles = makeStyles(() => ({
+    menuAdust: {
         margin: '0 30vh',
         marginTop: "-79px",
-        // backgroundColor: "gr",
         color: "white",
         fontSize: "10px",
         width: "12%",
         letterTransformation: "small"
     },
-    menuAdjustingsDown: {
+    menuAdustDown: {
         marginTop: "42px",
         width: "520px"
     },
@@ -32,7 +31,10 @@ const useStyles = makeStyles((theme) => ({
         padding: "12px"
     }
 }));
-export default function MenuList() {
+
+
+const NavMenu = () => {
+
     const classMenu = useStyles();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,25 +47,26 @@ export default function MenuList() {
         setAnchorEl(null);
     };
 
+
     return (
         <div>
-
-            <Button className={classMenu.menuAdjustings} aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+            <Button className={classMenu.menuAdust} aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                 menu
             </Button>
             <Menu
                 id="fade-menu"
-                className={classMenu.menuAdjustingsDown}
+                className={classMenu.menuAdustDown}
                 anchorEl={anchorEl}
                 keepMounted
                 open={open}
                 onClose={handleClose}
-                TransitionComponent={Fade}
-            >
+                TransitionComponent={Fade}>
                 <MenuItem className={classMenu.menuIconsColor} onClick={handleClose}> <Home /> Profile</MenuItem>
                 <MenuItem className={classMenu.menuIconsColor} onClick={handleClose}> <AccessAlarmIcon /> My account</MenuItem>
                 <MenuItem className={classMenu.menuIconsColor} onClick={handleClose}> <ThreeDRotation /> Logout</MenuItem>
             </Menu>
-        </div >
-    );
+        </div>
+    )
 }
+
+export default NavMenu

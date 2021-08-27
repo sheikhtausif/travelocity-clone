@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #0a438b;
+    font-size: 14px;
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.navbarLogo {
+    margin: 12px 5vh;
+}
+
+.navbarUl {
+    color: darkolivegreen;
+    display: flex;
+    flex: 1;
+    padding: 2vh;
+    margin: 5px 62vh;
+    padding: 4vh;
+    text-align: right;
+}
+
+.navbarLi {
+    text-align: right;
+    list-style-type: none;
+    padding-left: 4vh;
+    margin-left: 2vh;
+    font-weight: bold;
+}
+
+.travelNavLink {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2vh;
+}

@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.room_grid {
+    display: grid;
+    grid-template-columns: 32.7% 32.7% 32.7%;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+
+.room_div {
+    margin-top: 16px;
+    border: 1px solid rgb(143, 141, 141);
+    border-radius: 10px;
+    background: #FFF;
+}
+
+.room_div>img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.room_details {
+    padding: 8px;
+}
+
+.room_details>:nth-child(n) {
+    margin-top: 10px;
+}
+
+.room_details>small {
+    font-size: 11.5px;
+    color: #505c66;
+}
+
+.green, .green+span {
+    color: green;
+    cursor: pointer;
+}
+
+.more, .more+span {
+    color: #2A6EC1;
+    cursor: pointer;
+}
+
+.more+span {
+    margin-top: 3.5px;
+    margin-left: -8px;
+    font-size: 18px;
+}
+
+.flex_1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #505c66;
+}
+
+.line {
+    border-bottom: 1px solid rgb(143, 141, 141);
+    margin: 16px auto;
+}
+
+.flex_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #505c66;
+}
+
+.h3_price {
+    margin-top: 40px;
+}
+
+.flex_small {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.flex_2>button {
+    padding: 8px 16px;
+    background: #2A6EC1;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+}

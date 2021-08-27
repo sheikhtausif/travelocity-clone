@@ -1,17 +1,17 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import "../";
-
+import React from 'react'
 import { Button } from "@material-ui/core";
-import Footer_style from "../module/footer.module.css";
-import download from "../images/expediagroup.png"
-function Footer() {
+import Footer_style from "../style/footer.module.css";
+import download from "../images/expedia_group.png"
+
+const Footer = () => {
+
     return (
         <div className={Footer_style.footer}>
             <div className={Footer_style.FooterDisplay}>
                 <Button>
                     <img
                         className={Footer_style.footerImages}
-                        src={download} alt="expediaimage"
+                        src={download} alt="expedia_image"
                     />
                 </Button>
                 <ul className={Footer_style.FooterUL}>
@@ -63,7 +63,8 @@ function Footer() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export { Footer };
+export default Footer
+

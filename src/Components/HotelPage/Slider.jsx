@@ -1,7 +1,22 @@
 import React, { useState } from "react";
-import { SlideImage, StyledSlider } from "../Component/SliderImage";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import slidearrows from "../module/slider.module.css"
+import styles from "../style/slider.module.css"
+import styled from "styled-components";
+
+const SlideImage = styled.img`
+    width: 103vh;
+    height: 56vh;
+    object-fit: cover;
+    border-radius:2vh;
+    margin-top:2vh          
+`;
+
+const StyledSlider = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 const Slider = ({ slides }) => {
     const [current, setCurrent] = useState(0);
@@ -17,8 +32,8 @@ const Slider = ({ slides }) => {
 
     return (
         <StyledSlider>
-            <FaChevronLeft className={slidearrows.leftArrow} onClick={prevSlide} />
-            <FaChevronRight className={slidearrows.rightArrow} onClick={nextSlide} />
+            <FaChevronLeft className={styles.leftArrow} onClick={prevSlide} />
+            <FaChevronRight className={styles.rightArrow} onClick={nextSlide} />
             {slides.map((slide, index) => {
                 return (
                     <div key={index}>
