@@ -15,6 +15,21 @@
     gap: 22px;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2A6EC1;
+    padding: 12px;
+    background: #FFF;
+    font-size: 14px;
+}
+
+.flex>:nth-child(n):hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .left {
     flex-grow: 1;
     /* background: #FFF; */

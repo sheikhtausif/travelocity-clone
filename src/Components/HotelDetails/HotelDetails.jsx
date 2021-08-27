@@ -3,13 +3,14 @@ import AboutArea from './AboutArea'
 import Amenities from './Amenities'
 // import HotelMap from './HotelMap'
 import HotelOverview from './HotelOverview'
+import Policies from './Policies'
 import Rooms from './Rooms'
 import styles from './styles/hotelDetails.module.css'
 
 const HotelDetails = ({ hotelData }) => {
 
     const options = [
-        { title: "Overview", to: "#overview" },
+        { title: "Overview", to: "#" },
         { title: "Rooms", to: "#rooms" },
         { title: "Location", to: "#location" },
         { title: "Amenities", to: "#amenities" },
@@ -40,34 +41,35 @@ const HotelDetails = ({ hotelData }) => {
             </div>
             <div className={styles.option}>
                 {options.map((option, i) => (
-                    <p key={i}>{option.title}</p>
+                    <p key={i}><a href={option.to}>{option.title}</a></p>
                 ))}
-                <button className={styles.optionBtn}>Reserve a room</button>
+                <button className={styles.optionBtn}><a href="#rooms">Reserve a room</a></button>
             </div>
 
             <div className={styles.flex} style={{ background: '#FFF', borderRadius: '0 0 10px 10px' }}>
-                <div className={styles.left_1}>
+                <div className={styles.left_1} id="overview">
                     <HotelOverview hotelData={hotelData} />
                 </div>
                 <div className={styles.right_1}>
-                    {/* <HotelMap hotelData={hotelData[0]} /> */}
+                    {/* <HotelMap hotelData={hotelData} /> */}
                 </div>
             </div>
 
-            <div className={styles.gridRoom}>
-                <Rooms hotelData={hotelData} />
+            <div className={styles.room_grid} id="rooms">
+                {hotelData.roomTypes.map(room => (
+                    <Rooms key={room.roomTypeId} room={room} />
+                ))}
             </div>
 
-            {/* <div className={styles.gridRoom}>
-                {hotelData.roomsType.map(room => (
-                    <Rooms room={room} />
-                ))
-            </div>} */}
-
-            <AboutArea />
-
-            <Amenities />
-
+            <div id="location">
+                <AboutArea />
+            </div>
+            <div id="amenities">
+                <Amenities />
+            </div>
+            <div id="policies">
+                <Policies />
+            </div>
         </>
     )
 }
