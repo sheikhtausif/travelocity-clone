@@ -1,13 +1,20 @@
-import React from 'react'
 
-const App = () => {
+import { Footer } from "./Component/Footer";
+import TravelNavbar from "./Component/TravelNavbar";
+import TravelocityQR from "./Component/TravelocityQR";
+import RoomInformation from "./Component/RoomInformation";
+
+
+export default function App() {
+
     return (
-        <div>
-            <p> hello git milind branch</p>
-            <h1>hello</h1>
+        <div className="App">
+            <TravelNavbar />
+            <TravelocityQR />
+            <Footer />
+            <RoomInformation />
+
+
         </div>
-    )
+    );
 }
-
-export default App
-

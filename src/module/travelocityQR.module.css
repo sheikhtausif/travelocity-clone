@@ -1,0 +1,35 @@
+.travelocityWander {
+  display: flex;
+  border: 1px solid #505c66;
+  padding: 1vh;
+  width: 95%;
+  height: 70%;
+  margin: 8vh;
+}
+.travelocityImg {
+  /* width: 400px; */
+  width: 80vh;
+  height: 100%;
+  border-radius: 5px;
+  padding: 4vh;
+}
+.travelocityH1 {
+  color: #242c33;
+  font-size: 5vh;
+}
+.travelocityUl {
+  color: #505c66;
+  font-size: 2.2vh;
+}
+.QR {
+  width: 25vh;
+  height: 32vh;
+  text-align: center;
+  margin-top: 15vh;
+}
+.travelocityQrbtns {
+  padding: 1vh;
+  margin: 1vh;
+  background-color: aliceblue;
+  border: transparent;
+}

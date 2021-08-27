@@ -1,0 +1,30 @@
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 1.5rem;
+  object-fit: contain;
+  color: #0d5ab9;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5vh;
+  cursor: pointer;
+  font-weight: italic;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 1.5rem;
+  color: #0d5ab9;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5vh;
+  cursor: pointer;
+  font-weight: italic;
+}
+
+.leftArrow:hover {
+  box-shadow: blue;
+}

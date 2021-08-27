@@ -1,0 +1,32 @@
+.footer {
+  background-color: #f0f3f5;
+}
+.FooterDisplay {
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 5vh;
+  padding-top: 12px;
+}
+.FooterLi {
+  list-style-type: none;
+  padding-top: 12px;
+  font-size: 2vh;
+}
+.FooterLink {
+  color: dodgerblue;
+  text-decoration: none;
+}
+.footerImages {
+  width: 30vh;
+  margin-top: -26vh;
+}
+.FooterUL > h1 {
+  color: #242c33;
+  font-size: 2vh;
+}
+.footerCopyWrites {
+  font-size: 2vh;
+  text-align: center;
+  color: #505c66;
+}
