@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from "./style/navbar.module.css"
-import travel_logo from "./images/travel_logo.svg"
+import styles from "./HotelPage/style/navbar.module.css"
+import travel_logo from "./HotelPage/images/travel_logo.svg"
 import NavMenu from "./HotelPage/NavMenu"
 
 const Navbar = () => {
