@@ -1,10 +1,10 @@
 import React from 'react'
-import footer_v1 from "../images/footer_v1.webp"
-import scanner from "../images/scanner.png"
+import footer_v1 from "./images/footer_v1.webp"
+import scanner from "./images/scanner.png"
 import { Button } from '@material-ui/core'
-import styles from "../style/room_option.module.css"
+import styles from "./style/room_option.module.css"
 
-const RoomOption = () => {
+const Travelocity = () => {
     return (
         <div className={styles.travelocityWander}>
             <div>
@@ -37,4 +37,4 @@ const RoomOption = () => {
     )
 }
 
-export default RoomOption
+export default Travelocity

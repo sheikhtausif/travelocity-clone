@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from "@material-ui/core";
-import Footer_style from "../style/footer.module.css";
-import download from "../images/expedia_group.png"
+import Footer_style from "./Hotel/style/footer.module.css";
+import download from "./images/expedia_group.png"
 
 const Footer = () => {
 

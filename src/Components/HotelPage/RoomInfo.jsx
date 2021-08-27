@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from './Slider';
 import { Button } from '@material-ui/core';
 import { AccessibleForward, AccountCircle, ArrowBack, MoreHoriz } from '@material-ui/icons';
-import styles from "../style/room_info.module.css"
+import styles from "./style/room_info.module.css"
 
 const RoomInfo = () => {
 

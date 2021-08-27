@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import styles from "../style/slider.module.css"
+import styles from "./style/slider.module.css"
 import styled from "styled-components";
 
 const SlideImage = styled.img`
