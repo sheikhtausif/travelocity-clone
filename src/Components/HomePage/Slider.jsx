@@ -445,7 +445,7 @@ export default function ScrollableTabsButtonForce() {
                     <button style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); handleHotelSearch(); }}>Search</button>
                 </div>
             </TabPanel>
-            </div>
+           </div>
     );
 }
 
