@@ -76,7 +76,6 @@
 }
 
 .grid {
-    letter-spacing: 1px;
     display: grid;
     grid-template-areas: "name name" "amenities amenities" "amenities_1 amenities_2" "safety safety" "safety_1 safety_2";
 }
