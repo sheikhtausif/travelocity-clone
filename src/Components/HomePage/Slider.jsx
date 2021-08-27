@@ -225,10 +225,10 @@ export default function ScrollableTabsButtonForce() {
                             <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
                             <div className={styles.searchResultHight}>
                                 <div className={styles.SearchResult}>
-                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Mumbai", e) }}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Goa", e) }}>
                                         <RestoreIcon className={styles.searchIcon} />
                                         <div className={styles.SearchResultsMapping}>
-                                            <strong>Mumbai</strong>
+                                            <strong>Goa</strong>
                                             <div>IN</div>
                                         </div>
                                     </div>
@@ -344,10 +344,10 @@ export default function ScrollableTabsButtonForce() {
                             <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
                             <div className={styles.searchResultHight}>
                                 <div className={styles.SearchResult}>
-                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Mumbai", e) }}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Goa", e) }}>
                                         <RestoreIcon className={styles.searchIcon} />
                                         <div className={styles.SearchResultsMapping}>
-                                            <strong>Mumbai</strong>
+                                            <strong>Goa</strong>
                                             <div>IN</div>
                                         </div>
                                     </div>
@@ -671,18 +671,6 @@ export default function ScrollableTabsButtonForce() {
                         <div className={styles.traverlersPopup} style={{ display: `${trevelersPopupOpen}` }}>
                             <div>
                                 <h3 className={styles.travelersPopupHeading}>Travelers</h3>
-                            </div>
-                            <div className={styles.trevelersFlexContainer}>
-                                <h3 className={styles.treveleresAdultSelector}>Room (Max 4 Adults/per room)</h3>
-                                <div className={styles.trevelersFlexChild}>
-                                    <div className={styles.increseDecreaseIcon} style={{ opacity: `${(trevelersRoomCnt === 1) ? 0.5 : 1}` }} onClick={(e) => { handleAdulTrevelersRoomCnt(e, -1) }}>
-                                        <RemoveIcon className={styles.incDecIcon} />
-                                    </div>
-                                    <h3>{trevelersRoomCnt}</h3>
-                                    <div className={styles.increseDecreaseIcon} style={{ opacity: `${(trevelersRoomCnt === 5) ? 0.5 : 1}` }} onClick={(e) => { handleAdulTrevelersRoomCnt(e, 1) }}>
-                                        <AddIcon className={styles.incDecIcon} />
-                                    </div>
-                                </div>
                             </div>
                             <div className={styles.trevelersFlexContainer}>
                                 <h3 className={styles.treveleresAdultSelector}>Adults</h3>
