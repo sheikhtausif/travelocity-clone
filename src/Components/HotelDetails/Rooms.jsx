@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import styles from './styles/room.module.css'
 import { MdNavigateNext } from 'react-icons/md';
 import { BiInfoCircle } from 'react-icons/bi';
@@ -17,7 +18,15 @@ import { RadioGroup } from '@material-ui/core';
 
 
 const Rooms = ({ hotelData }) => {
-    console.log('hotelData:', hotelData.roomTypes)
+
+    const [price, setPrice] = useState(0)
+    const handlePricesInc = () => {
+        setPrice(118)
+    }
+    const handlePricesDec = () => {
+        setPrice(0)
+    }
+
     return (
         <div className={styles.room_grid}>
             {hotelData.roomTypes.map(room => (
@@ -72,19 +81,19 @@ const Rooms = ({ hotelData }) => {
                             <h4>Extras</h4>
                             <RadioGroup aria-label="price" name="price_1">
                                 <Box className={styles.flex_2}>
-                                    <FormControlLabel value="noExtra" control={<Radio color="primary" />} label="One-way airport transfer" />
+                                    <FormControlLabel value="noExtra" control={<Radio color="primary" />} label="One-way airport transfer" onChange={handlePricesDec} />
                                     <p>+ $0</p>
                                 </Box>
                                 <Box className={styles.flex_2}>
-                                    <FormControlLabel value="halfBoard" control={<Radio color="primary" />} label="Half Board" />
+                                    <FormControlLabel value="halfBoard" control={<Radio color="primary" />} label="Half Board" onChange={handlePricesInc} />
                                     <p>+ $118</p>
                                 </Box>
                             </RadioGroup>
-                            <h3 className={styles.h3_price}>$2,241</h3>
+                            <h3 className={styles.h3_price}>${67 + price}</h3>
                             <div className={styles.flex_2}>
                                 <div className={styles.flex_small}>
                                     <small>per night</small>
-                                    <small style={{ fontWeight: 'bold', marginBottom: '5px' }}>$2,644 total</small>
+                                    <small style={{ fontWeight: 'bold', marginBottom: '5px' }}>${67 + price} total</small>
                                     <small>include tax & fees</small>
                                 </div>
                                 <button>Reserve</button>
@@ -94,7 +103,7 @@ const Rooms = ({ hotelData }) => {
                 </div>
             ))
             }
-        </div >
+        </div>
     )
 }
 
