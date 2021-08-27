@@ -87,7 +87,7 @@ const RoomInfo = () => {
                             <div>
                                 <i class="zmdi zmdi-home zmdi-hc-fw"></i>
                                 <div>
-                                    <p className={styles.roomTimeDetails}> <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "0.2vh", marginTop: "-15px", fontSize: "28px" }}>airline_seat_individual_suite</i> BedTime </p>
+                                    <p className={styles.roomTimeDetails}> <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "0.2vh", fontSize: "28px" }}>airline_seat_individual_suite</i> BedTime </p>
                                     <div>
                                         <ul>
                                             <li className={styles.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i>Access water hot</li>
