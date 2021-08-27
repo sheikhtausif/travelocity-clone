@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Ads = () => {
-    return (
-        <div>
-            <img src="https://tpc.googlesyndication.com/simgad/15209687412445498703" alt="ads" />
-        </div>
-    )
-}
+  return (
+    <div>
+      <img
+        src="https://tpc.googlesyndication.com/simgad/12420666613166605282?"
+        alt="ads"
+      />
+    </div>
+  );
+};
 
-export default Ads
+export default Ads;

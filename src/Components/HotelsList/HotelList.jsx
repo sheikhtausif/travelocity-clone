@@ -5,6 +5,7 @@ import axios from "axios";
 import styled from "styled-components";
 import StarRateIcon from "@material-ui/icons/StarRate";
 import logo from "../../logo.svg";
+import Ads from "../HotelDetails/Ads";
 import {
   FormControlLabel,
   makeStyles,
@@ -38,10 +39,10 @@ const useStyle = makeStyles({
 });
 
 const Wrapper = styled.div`
-  width: 65%;
+  width: 75%;
   margin: auto;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 22% 63% 15%;
   grid-gap: 1.5rem;
 
   .filter-title {
@@ -107,9 +108,8 @@ export const HotelList = () => {
       .then((res) => {
         setData(res.data);
         setHotels(res.data);
-        setTimeout(() => {
-          setloading(false);
-        }, 1000);
+
+        setloading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -272,6 +272,10 @@ export const HotelList = () => {
               );
             })
           )}
+        </div>
+        <div>
+          <Ads />
+          <Ads />
         </div>
       </Wrapper>
     </>
