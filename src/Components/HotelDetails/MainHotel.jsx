@@ -40,4 +40,4 @@ const MainHotel = () => {
     )
 }
 
-export default MainHotel
+export default MainHotel;
