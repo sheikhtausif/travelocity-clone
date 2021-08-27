@@ -35,7 +35,7 @@ const Amenities = () => {
                             <WifiIcon />
                             <h4>Internet</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Available in all rooms: Free WiFi and wired Internet</p>
                             <p>Available in some public areas: Free WiFi</p>
                             <p>WiFi in public areas is free with a 4-device limit</p>
@@ -45,7 +45,7 @@ const Amenities = () => {
                             <LocalParkingIcon />
                             <h4>Parking and transportation</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Free self parking on site</p>
                             <p>Free valet parking on site</p>
                             <p>Limited onsite parking</p>
@@ -60,7 +60,7 @@ const Amenities = () => {
                             <RestaurantMenuIcon />
                             <h4>Food and drink</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Buffet breakfast available for a fee daily 6:30 AM–10:30 AM: INR 1200 for adults and INR 625 for children
                             </p>
                             <p>5 restaurants and 1 coffee shop/café</p>
@@ -73,7 +73,7 @@ const Amenities = () => {
                             <VideogameAssetIcon />
                             <h4>Things to do</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>24-hour fitness center</p>
                             <p>9 holes of golf</p>
                             <p>Evening entertainment</p>
@@ -91,7 +91,7 @@ const Amenities = () => {
                             <GroupIcon />
                             <h4>Family friendly</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Art supplies</p>
                             <p>Babysitting/childcare (surcharge)</p>
                             <p>Children's books</p>
@@ -112,7 +112,7 @@ const Amenities = () => {
                             <ConfirmationNumberIcon />
                             <h4>Conveniences</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>ATM/banking services</p>
                             <p>Ballroom</p>
                             <p>Banquet hall</p>
@@ -126,7 +126,7 @@ const Amenities = () => {
                             <RoomServiceIcon />
                             <h4>Guest services</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>24-hour front desk</p>
                             <p>Concierge services</p>
                             <p>Daily housekeeping</p>
@@ -146,7 +146,7 @@ const Amenities = () => {
                             <DoneIcon />
                             <h4>Languages spoken</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>English</p>
                             <p>Hindi</p>
                         </div>
@@ -154,7 +154,7 @@ const Amenities = () => {
                             <BusinessCenterIcon />
                             <h4>Business services</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>24-hour business center</p>
                             <p>Computer station</p>
                             <p>Conference center (50000 square feet of space)</p>
@@ -165,7 +165,7 @@ const Amenities = () => {
                             <OutdoorGrillIcon />
                             <h4>Outdoors</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>BBQ grill(s)</p>
                             <p>Free pool cabanas</p>
                             <p>Garden</p>
@@ -179,7 +179,7 @@ const Amenities = () => {
                             <SpaIcon />
                             <h4>Spa</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>4 treatment rooms</p>
                             <p>Aromatherapy</p>
                             <p>Body scrubs</p>
@@ -199,7 +199,7 @@ const Amenities = () => {
                             <AccessibleIcon />
                             <h4>Accessibility</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>If you have requests for specific accessibility needs, please contact the property using the information on the reservation confirmation received after booking.</p>
                             <p>Accessible bathroom (select rooms)</p>
                             <p>Bathroom emergency pull cord</p>
@@ -229,7 +229,7 @@ const Amenities = () => {
                             <DoneIcon />
                             <h4>More</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Couples dining</p>
                             <p>Designated smoking areas (fines apply)</p>
                             <p>Renovated entire property - September 2019</p>
@@ -250,7 +250,7 @@ const Amenities = () => {
                             <HotelIcon />
                             <h4>Bedroom</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Air conditioning</p>
                             <p>Bed sheets</p>
                             <p>Blackout drapes/curtains</p>
@@ -263,7 +263,7 @@ const Amenities = () => {
                             <BathtubIcon />
                             <h4>Bathroom</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Bathrobes</p>
                             <p>Designer toiletries</p>
                             <p>Hair dryer</p>
@@ -277,7 +277,7 @@ const Amenities = () => {
                             <DoneIcon />
                             <h4>Entertainments</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>32-inch LED TV</p>
                             <p>DVD player</p>
                             <p>Pay movies</p>
@@ -288,7 +288,7 @@ const Amenities = () => {
                             <RestaurantMenuIcon />
                             <h4>Food and drink</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Champagne service</p>
                             <p>Electric kettle</p>
                             <p>Free bottled water</p>
@@ -301,7 +301,7 @@ const Amenities = () => {
                             <DoneIcon />
                             <h4>More</h4>
                         </Box>
-                        <div style={{ marginLeft: '30px' }}>
+                        <div style={{ marginLeft: '33px' }}>
                             <p>Composting</p>
                             <p>Connecting rooms available</p>
                             <p>Desk</p>
