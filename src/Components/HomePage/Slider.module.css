@@ -223,3 +223,21 @@
     cursor: pointer;
     padding: 0.25rem 1rem;
 }
+
+
+.swapIconDiv {
+    position: absolute;
+    left: -23px;
+    top: 11px;
+    border: 1px solid;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    color: #555c66;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
