@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@material-ui/core';
 import travelocityRoomInfo from "../module/roominfo.module.css"
 import Slider from './Slider';
-import { ArrowBack } from '@material-ui/icons';
+import { AccessibleForward, AccountCircle, ArrowBack, MoreHoriz } from '@material-ui/icons';
 
 const RoomInformation = () => {
 
@@ -36,20 +36,20 @@ const RoomInformation = () => {
                         <h5>Room, 1 King, Balcony, Marina Tower  </h5>
                         <p className={travelocityRoomInfo.roombaypower}>Bay view</p>
                         <div className={travelocityRoomInfo.roomTime}>
-                            <i className="material-icons " style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i>
-                            <p> 305 sqrt </p>
+                            <i className="material-icons " style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}>accessibility</i>
+                            <p className={travelocityRoomInfo.travekRoomQuality}> 305 sqrt </p>
                         </div>
                         <div className={travelocityRoomInfo.roomTime}>
-                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>format_color_reset</i>
-                            <p> 305 sqrt</p>
+                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}>format_color_reset</i>
+                            <p className={travelocityRoomInfo.travekRoomQuality}>  305 sqrt</p>
                         </div>
                         <div className={travelocityRoomInfo.roomTime}>
-                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>airline_seat_individual_suite</i>
-                            <p> 305 sqrt</p>
+                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}>airline_seat_individual_suite</i>
+                            <p className={travelocityRoomInfo.travekRoomQuality}> 305 sqrt</p>
                         </div>
                         <div className={travelocityRoomInfo.roomTime}>
-                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>check</i>
-                            <p> 305 sqrt</p>
+                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}><AccountCircle /></i>
+                            <p className={travelocityRoomInfo.travekRoomQuality}> 305 sqrt</p>
                         </div>
 
                         {/* getst */}
@@ -67,15 +67,15 @@ const RoomInformation = () => {
                                 <div>
                                     <div>
                                         <div className={travelocityRoomInfo.acccessiblity}>
-                                            <i class="material-icons">check</i>
+                                            <i class="material-icons"><AccessibleForward /></i>
                                             <p className={travelocityRoomInfo.roomTimeDetails}>  Accessibility </p>
                                         </div>
                                         <ul>
-                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i> Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i> Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i> Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i> Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i> Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i> Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i> Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i> Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i> Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i className="material-icons" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i> Access water hot</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -87,14 +87,14 @@ const RoomInformation = () => {
                             <div>
                                 <i class="zmdi zmdi-home zmdi-hc-fw"></i>
                                 <div>
-                                    <p className={travelocityRoomInfo.roomTimeDetails}>  BedTime </p>
+                                    <p className={travelocityRoomInfo.roomTimeDetails}> <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "0.2vh", marginTop: "-15px", fontSize: "28px" }}>airline_seat_individual_suite</i> BedTime </p>
                                     <div>
                                         <ul>
-                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i>Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i>Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i>Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i>Access water hot</li>
-                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}>accessibility</i>Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i>Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i>Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i>Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i>Access water hot</li>
+                                            <li className={travelocityRoomInfo.roomTime}> <i class="material-icons custom" style={{ marginTop: "0vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh" }}><MoreHoriz /></i>Access water hot</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -127,8 +127,7 @@ const RoomInformation = () => {
                             <p className={travelocityRoomInfo.moneyunder3}>price details</p>
                         </div>
                         <div className={travelocityRoomInfo.travelLeftOrRemain}>
-                            <Button className="ReserveSubmitted" variant="primary"> Reserve btn </Button>
-                            <Button className="ReserveRemaining"> Remaining 4</Button>
+                            <Button variant="primary"> Reserve btn </Button>
                         </div>
 
                     </div>

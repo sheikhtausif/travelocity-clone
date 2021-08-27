@@ -11,8 +11,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     menuAdjustings: {
-        margin: '0 25vh',
-        marginTop: "-49px",
+        margin: '0 30vh',
+        marginTop: "-79px",
         // backgroundColor: "gr",
         color: "white",
         fontSize: "10px",
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         letterTransformation: "small"
     },
     menuAdjustingsDown: {
-        marginTop: "32px",
+        marginTop: "42px",
         width: "520px"
     },
     menuIconsColor: {

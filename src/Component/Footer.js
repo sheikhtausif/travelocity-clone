@@ -57,7 +57,7 @@ function Footer() {
             <hr />
             <div className={Footer_style.footerCopyWrites}>
                 <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://mdbootstrap.com/"> © 2021 Travelscape LLC, an Expedia Group Company. All rights reserved.</a>
+                    © 2021 Travelscape LLC, an Expedia Group Company. All rights reserved.
                 </div>
                 <div class="footer-copyright text-center py-3">© Travelocity, the Stars Design, and The Roaming Gnome Design are trademarks or registered trademarks of Travelscape LLC. CST# 2056372-50.
                 </div>

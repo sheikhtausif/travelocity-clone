@@ -64,7 +64,7 @@
   font-size: 1.3vh;
 }
 .moneyunder3 {
-  color: blue;
+  color: #0d5ab9;
   font-size: 2vh;
 }
 .ReserveDate {
@@ -72,7 +72,7 @@
 }
 
 .travelLeftOrRemain {
-  margin-top: 31vh;
+  margin-top: 37vh;
   margin-left: 42vh;
 }
 .roominfoBack {
@@ -81,4 +81,14 @@
 }
 .adjustroomicon {
   margin: 12px;
+}
+
+.ReserveSubmitted {
+  margin-top: 229px;
+}
+.travekRoomQuality {
+  margin-top: -0.2vh;
+  color: #505c66;
+  margin-left: 1.3vh;
+  padding-left: 1.2vh;
 }

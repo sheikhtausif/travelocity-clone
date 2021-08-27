@@ -1,16 +1,22 @@
 .Navbarnav {
-  background-color: #0d5ab9;
+  background-color: #0a438b;
   font-size: 14px;
   display: flex;
-  margin: 0 0vh;
+  /* margin: 10 10vh; */
+  margin-top: 12px;
   width: 100%;
+  /* padding: 2px; */
 }
+.NavbarnavLogo {
+  margin: 12px 5vh;
+}
+
 .NavbarUl {
   color: darkolivegreen;
   display: flex;
   flex: 1;
   padding: 2vh;
-  margin: 0px 72vh;
+  margin: 5px 62vh;
   padding: 4vh;
   text-align: right;
 }

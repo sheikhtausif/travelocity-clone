@@ -8,7 +8,7 @@ const TravelNavbar = () => {
     return (
         <div className={travelNavbar.Navbarnav}>
             <div>
-                <img src={travellogo} alt="travellogo" />
+                <img className={travelNavbar.NavbarnavLogo} src={travellogo} alt="travellogo" />
                 <MenuList />
                 <div>
 
