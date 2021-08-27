@@ -28,7 +28,7 @@ const RoomInfo = () => {
     return (
         <div>
             <div>
-                <a href="#" style={{ padding: "13px", margin: "32px 12px" }}>  <ArrowBack /> <span className={styles.adjustRoomIcon}>room info </span> </a>
+                <a href="/" style={{ padding: "13px", margin: "32px 12px" }}><ArrowBack /><span className={styles.adjustRoomIcon}>room info</span></a>
             </div>
             <div className={styles.travelDisplayFlex}>
                 <div>
@@ -36,19 +36,19 @@ const RoomInfo = () => {
                         <h5>Room, 1 King, Balcony, Marina Tower  </h5>
                         <p className={styles.roomBayPower}>Bay view</p>
                         <div className={styles.roomTime}>
-                            <i className="material-icons " style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}>accessibility</i>
+                            <i className="material-icons " style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", }}>accessibility</i>
                             <p className={styles.travelRoomQuality}> 305 sqrt </p>
                         </div>
                         <div className={styles.roomTime}>
-                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}>format_color_reset</i>
+                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", }}>format_color_reset</i>
                             <p className={styles.travelRoomQuality}>  305 sqrt</p>
                         </div>
                         <div className={styles.roomTime}>
-                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}>airline_seat_individual_suite</i>
+                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", }}>airline_seat_individual_suite</i>
                             <p className={styles.travelRoomQuality}> 305 sqrt</p>
                         </div>
                         <div className={styles.roomTime}>
-                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", marginTop: "-5px" }}><AccountCircle /></i>
+                            <i class="material-icons" style={{ marginTop: "1vh", color: "#505C66", marginLeft: "1.3vh", paddingLeft: "1.2vh", }}><AccountCircle /></i>
                             <p className={styles.travelRoomQuality}> 305 sqrt</p>
                         </div>
 
