@@ -168,6 +168,8 @@
     border: 1px solid rgb(199, 199, 199);
     border-radius: 10px;
     background: white;
+    display: flex;
+    align-items: center;
 }
 
 .info2RightImg1 {
@@ -179,6 +181,25 @@
     background-size: cover;
     border-radius: 9.5px 0px 0px 9.5px;
 }
+
+.info2RightImg2 {
+    background-image: url("https://tpc.googlesyndication.com/simgad/4885167890549748352?");
+}
+
+.info2Right > div > h2 {
+    color: #001959;
+    font-size: 1.125rem;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.info2Right > div > p {
+    color: #465280;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 10px;
+}
+
 
 .info3 {
     width: 80vw;
