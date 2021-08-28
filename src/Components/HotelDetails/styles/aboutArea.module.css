@@ -1,21 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .about_area {
-    letter-spacing: 1px;
     border-radius: 12px;
     background: #FFF;
-    padding: 22px 14px 100px 14px;
+    padding: 22px 14px 40px 14px;
     margin: 20px 0;
 }
 
 .grid {
     display: grid;
-    gap: 8px;
+    gap: 16px;
     grid-template-areas: "about map map" "about details details";
-    grid-template-columns: 32% 33% 33%;
+    grid-template-columns: 30% 33% 33%;
 }
 
 .about {
@@ -30,6 +24,7 @@
     color: #505c66;
     font-size: 13px;
     text-align: justify;
+    width: 90%;
 }
 
 .map {

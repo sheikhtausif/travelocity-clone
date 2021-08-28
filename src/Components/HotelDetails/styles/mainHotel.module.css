@@ -1,10 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 .container {
     background: #F0F3F5;
+    text-align: justify;
 }
 
 .mainBox {
@@ -14,6 +10,21 @@
     gap: 22px;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2A6EC1;
+    padding: 12px;
+    background: #FFF;
+    font-size: 14px;
+}
+
+.flex>:nth-child(n):hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .left {
     flex-grow: 1;
     /* background: #FFF; */
@@ -21,4 +32,7 @@
 
 .right {
     width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }

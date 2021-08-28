@@ -24,7 +24,7 @@ const AboutArea = () => {
                                 <LocationOnIcon />
                                 <h3>What's nearby</h3>
                             </Box>
-                            <div style={{ marginLeft: '30px' }}>
+                            <div style={{ marginLeft: '32px' }}>
                                 <p>Dhaula Kuan - 5 min walk</p>
                                 <p>GK Market - 19 min walk</p>
                                 <p>Pusa Hill Forest - 9 min drive</p>
@@ -37,7 +37,7 @@ const AboutArea = () => {
                                 <DriveEtaIcon />
                                 <h3>Getting around</h3>
                             </Box>
-                            <div style={{ marginLeft: '28px' }}>
+                            <div style={{ marginLeft: '30px' }}>
                                 <Box className={styles.flex_2}>
                                     <DriveEtaIcon />
                                     <p>New Delhi Sardar Patel Station - 2 min walk</p>
@@ -57,7 +57,7 @@ const AboutArea = () => {
                                 <RestaurantMenuIcon />
                                 <h3>Restaurants</h3>
                             </Box>
-                            <div style={{ marginLeft: '30px' }}>
+                            <div style={{ marginLeft: '32px' }}>
                                 <p>Orient Express – Fine-dining restaurant with a bar offering French cuisine. Serves dinner daily. Reservations required.</p>
                                 <p>Masala Art – Family restaurant with a bar offering Indian cuisine. Serves lunch and dinner daily. Reservations required.</p>
                                 <p>Spicy Duck – Pool-view family restaurant with a bar offering Chinese cuisine. Serves lunch and dinner daily. Reservations required.</p>
@@ -123,7 +123,7 @@ const AboutArea = () => {
                         <p>Reservations are required for the use of certain onsite facilities</p>
                     </div>
                 </div>
-                
+
             </div>
         </>
     )

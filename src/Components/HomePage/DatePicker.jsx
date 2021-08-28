@@ -37,7 +37,8 @@ export default function MaterialUIPickers({ props, type, startDate }) {
                 top: "7px",
                 left: "20px",
                 opacity: 0,
-                cursor: "pointer"
+                cursor: "pointer",
+                width: "85%"
             }}
         />
     );

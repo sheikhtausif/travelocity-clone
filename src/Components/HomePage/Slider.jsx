@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,7 +17,12 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
 import MaterialUIPickers from './DatePicker';
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import RestoreIcon from '@material-ui/icons/Restore';
 import DateFnsUtils from "@date-io/date-fns";
+import { useHistory } from 'react-router-dom';
+import axios from "axios";
+import { v4 as uuid } from "uuid";
+import SwapHorizSharpIcon from '@material-ui/icons/SwapHorizSharp';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -79,6 +84,34 @@ export default function ScrollableTabsButtonForce() {
     const [trevelersPopupOpen, setTrevelersPopupOpen] = React.useState("none");
     const [startDate, setStartDate] = React.useState(new Date());
     const [endDate, setEndDate] = React.useState(new Date());
+    const history = useHistory();
+    const [query, setQuery] = useState("");
+    const [searchQueryResult, setSearchQueryResult] = useState([]);
+    const [isSearching, setIsSearching] = useState(false);
+    const [flightLeavingVal, setFlightLeavingVal] = useState("");
+    const [flightLeavingSearchPopup, setFlightLeavingSearchPopup] = useState("none");
+
+
+    useEffect(() => {
+        if (isSearching || query === "") {
+            return;
+        }
+
+        handleSearchByQuery();
+    }, [query])
+
+    const handleSearchByQuery = () => {
+        setIsSearching(false);
+
+        axios.get(`http://localhost:3001/places?q=${query}&_limit=50`).then((res) => {
+            setSearchQueryResult(res.data);
+        }).catch((err) => {
+            console.log(err);
+        }).finally(() => {
+            setIsSearching(false);
+        })
+    }
+
 
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -86,6 +119,11 @@ export default function ScrollableTabsButtonForce() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    const handleSwap = () => {
+        setGoingToVal(flightLeavingVal);
+        setFlightLeavingVal(goingToVal);
+    }
 
     const handleOpenLocation = (e) => {
         e.stopPropagation();
@@ -97,6 +135,22 @@ export default function ScrollableTabsButtonForce() {
         e.stopPropagation();
         setOpenLocationSearch("none");
         setGoingToVal(data);
+    }
+
+    const handleFlightLeavingOpenSearchPopup = (e) => {
+        e.stopPropagation();
+        setFlightLeavingSearchPopup("inline");
+        searchRef.current.focus();
+    }
+
+    const handleFlightLeavingCloseSearchPopup = (data, e) => {
+        e.stopPropagation();
+        setFlightLeavingSearchPopup("none");
+        setFlightLeavingVal(data);
+    }
+
+    const handleHotelSearch = () => {
+        history.push("/hotels");
     }
 
     const handleAdulTrevelersCnt = (e, val) => {
@@ -186,17 +240,31 @@ export default function ScrollableTabsButtonForce() {
                         </div>
                         {/* -------Searching pop up bar------- */}
                         <div className={styles.searchBox} style={{ display: `${openLocationSearch}` }}>
-                            <input ref={searchRef} type="text" className={styles.searchInput} placeholder="Where are you going?" />
-                            <div>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
                                 <div className={styles.SearchResult}>
-                                    <div className={styles.SearchResultIndividual}>
-                                        <LocationOnIcon className={styles.searchIcon} />
-                                        <div className={styles.SearchResultsMapping} onClick={(e) => { handleCloseLocation("Mumbai (BOM - Chhatrapati Shivaji Intl.)", e) }}>
-                                            <strong>Mumbai (BOM - Chhatrapati Shivaji Intl.)</strong>
-                                            <div>India</div>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Goa", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Goa</strong>
+                                            <div>IN</div>
                                         </div>
                                     </div>
                                 </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
@@ -273,35 +341,372 @@ export default function ScrollableTabsButtonForce() {
                     </div>
                 </div>
                 <div className={styles.searchBtnDiv}>
-                    <button style={{cursor: 'pointer'}}>Search</button>
+                    <button style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); handleHotelSearch(); }}>Search</button>
                 </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
+                <div className={styles.hotelContainer}>
+                    <div style={{ width: "32%" }} className={`${styles.hotelBtns} ${styles.hotelGoingToBtn}`} onClick={(e) => { handleFlightLeavingOpenSearchPopup(e) }}>
+                        <LocationOnIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            {(flightLeavingVal === "") ? "Leaving from" : <div><div className={styles.checkInHeading}>Leaving from</div>
+                                <div className={styles.checkinDate}>{flightLeavingVal}</div></div>}
+                        </div>
+                        {/* -------Searching pop up bar------- */}
+                        <div className={styles.searchBox} style={{ display: `${flightLeavingSearchPopup}` }}>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
+                                <div className={styles.SearchResult}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleFlightLeavingCloseSearchPopup("Mumbai", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Mumbai</strong>
+                                            <div>IN</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleFlightLeavingCloseSearchPopup(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ width: "32%" }} className={`${styles.hotelBtns} ${styles.hotelGoingToBtn}`} onClick={(e) => { handleOpenLocation(e) }}>
+                        <div className={styles.swapIconDiv} onClick={(e) => { e.stopPropagation(); handleSwap(); }}><SwapHorizSharpIcon className={styles.swapIcon} /></div>
+
+                        <LocationOnIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            {(goingToVal === "") ? "Going to" : <div><div className={styles.checkInHeading}>Going to</div>
+                                <div className={styles.checkinDate}>{goingToVal}</div></div>}
+                        </div>
+                        {/* -------Searching pop up bar------- */}
+                        <div className={styles.searchBox} style={{ display: `${openLocationSearch}` }}>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
+                                <div className={styles.SearchResult}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Mumbai", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Mumbai</strong>
+                                            <div>IN</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ width: '28%' }} className={`${styles.hotelBtns} ${styles.hoteldateBtn}`}>
+                        <EventIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>Departing</div>
+                            <div className={styles.checkinDate}>{`${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${sort_year(startDate)}`}</div>
+                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                <MaterialUIPickers props={{ handleStartDate }} type={"checkIn"} />
+                            </MuiPickersUtilsProvider>
+
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.searchBtnDiv}>
-                    <button style={{cursor: 'pointer'}}>Search</button>
+                    <button style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); handleHotelSearch(); }}>Search</button>
                 </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
+                <div className={styles.hotelContainer}>
+                    <div style={{ width: "32%" }} className={`${styles.hotelBtns} ${styles.hotelGoingToBtn}`} onClick={(e) => { handleFlightLeavingOpenSearchPopup(e) }}>
+                        <LocationOnIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            {(flightLeavingVal === "") ? "Leaving from" : <div><div className={styles.checkInHeading}>Leaving from</div>
+                                <div className={styles.checkinDate}>{flightLeavingVal}</div></div>}
+                        </div>
+                        {/* -------Searching pop up bar------- */}
+                        <div className={styles.searchBox} style={{ display: `${flightLeavingSearchPopup}` }}>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
+                                <div className={styles.SearchResult}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleFlightLeavingCloseSearchPopup("Mumbai", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Mumbai</strong>
+                                            <div>IN</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleFlightLeavingCloseSearchPopup(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ width: "32%" }} className={`${styles.hotelBtns} ${styles.hotelGoingToBtn}`} onClick={(e) => { handleOpenLocation(e) }}>
+                        <div className={styles.swapIconDiv} onClick={(e) => { e.stopPropagation(); handleSwap(); }}><SwapHorizSharpIcon className={styles.swapIcon} /></div>
+
+                        <LocationOnIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            {(goingToVal === "") ? "Going to" : <div><div className={styles.checkInHeading}>Going to</div>
+                                <div className={styles.checkinDate}>{goingToVal}</div></div>}
+                        </div>
+                        {/* -------Searching pop up bar------- */}
+                        <div className={styles.searchBox} style={{ display: `${openLocationSearch}` }}>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
+                                <div className={styles.SearchResult}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Mumbai", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Mumbai</strong>
+                                            <div>IN</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ width: '28%' }} className={`${styles.hotelBtns} ${styles.hoteldateBtn}`}>
+                        <EventIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>Departing</div>
+                            <div className={styles.checkinDate}>{`${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${sort_year(startDate)}`}</div>
+                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                <MaterialUIPickers props={{ handleStartDate }} type={"checkIn"} />
+                            </MuiPickersUtilsProvider>
+
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.searchBtnDiv}>
-                    <button style={{cursor: 'pointer'}}>Search</button>
+                    <button style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); handleHotelSearch(); }}>Search</button>
                 </div>
             </TabPanel>
             <TabPanel value={value} index={3}>
+                <div className={styles.hotelContainer}>
+                    <div className={`${styles.hotelBtns} ${styles.hotelGoingToBtn}`} onClick={(e) => { handleOpenLocation(e) }}>
+                        <LocationOnIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            {(goingToVal === "") ? "Going to" : <div><div className={styles.checkInHeading}>Going to</div>
+                                <div className={styles.checkinDate}>{goingToVal}</div></div>}
+                        </div>
+                        {/* -------Searching pop up bar------- */}
+                        <div className={styles.searchBox} style={{ display: `${openLocationSearch}` }}>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
+                                <div className={styles.SearchResult}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Mumbai", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Mumbai</strong>
+                                            <div>IN</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`${styles.hotelBtns} ${styles.hoteldateBtn}`}>
+                        <EventIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>Check-in</div>
+                            <div className={styles.checkinDate}>{`${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${sort_year(startDate)}`}</div>
+                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                <MaterialUIPickers props={{ handleStartDate }} type={"checkIn"} />
+                            </MuiPickersUtilsProvider>
+
+                        </div>
+                    </div>
+                    <div className={`${styles.hotelBtns} ${styles.hoteldateBtn}`}>
+                        <EventIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>Check-out</div>
+                            <div className={styles.checkinDate}>{`${endDate.getDate()} ${monthNames[endDate.getMonth()]} ${sort_year(endDate)}`}</div>
+                        </div>
+                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                            <MaterialUIPickers props={{ handleEndDate }} startDate={startDate} type={"checkOut"} />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                    <div className={`${styles.hotelBtns} ${styles.hotelTraverls}`} onClick={(e) => { e.stopPropagation(); setTrevelersPopupOpen("inline") }}>
+                        <PersonIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>Trevelers</div>
+                            <div className={styles.checkinDate}>{trevelersRoomCnt} room, {AdultsTrevelers} trevelers</div>
+                        </div>
+                        {/* ---------slecting traverlers and room--------- */}
+                        <div className={styles.traverlersPopup} style={{ display: `${trevelersPopupOpen}` }}>
+                            <div>
+                                <h3 className={styles.travelersPopupHeading}>Travelers</h3>
+                            </div>
+                            <div className={styles.trevelersFlexContainer}>
+                                <h3 className={styles.treveleresAdultSelector}>Room (Max 4 Adults/per room)</h3>
+                                <div className={styles.trevelersFlexChild}>
+                                    <div className={styles.increseDecreaseIcon} style={{ opacity: `${(trevelersRoomCnt === 1) ? 0.5 : 1}` }} onClick={(e) => { handleAdulTrevelersRoomCnt(e, -1) }}>
+                                        <RemoveIcon className={styles.incDecIcon} />
+                                    </div>
+                                    <h3>{trevelersRoomCnt}</h3>
+                                    <div className={styles.increseDecreaseIcon} style={{ opacity: `${(trevelersRoomCnt === 5) ? 0.5 : 1}` }} onClick={(e) => { handleAdulTrevelersRoomCnt(e, 1) }}>
+                                        <AddIcon className={styles.incDecIcon} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.trevelersFlexContainer}>
+                                <h3 className={styles.treveleresAdultSelector}>Adults</h3>
+                                <div className={styles.trevelersFlexChild}>
+                                    <div className={styles.increseDecreaseIcon} style={{ opacity: `${(AdultsTrevelers === 1) ? 0.5 : 1}` }} onClick={(e) => { handleAdulTrevelersCnt(e, -1) }}>
+                                        <RemoveIcon className={styles.incDecIcon} />
+                                    </div>
+                                    <h3>{AdultsTrevelers}</h3>
+                                    <div className={styles.increseDecreaseIcon} onClick={(e) => { handleAdulTrevelersCnt(e, 1) }}>
+                                        <AddIcon className={styles.incDecIcon} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.trevelersFlexContainer}>
+                                <h3 className={styles.treveleresAdultSelector}>Children (Ages 5 to 12)</h3>
+                                <div className={styles.trevelersFlexChild}>
+                                    <div className={styles.increseDecreaseIcon} style={{ opacity: `${(childrenCnt === 0) ? 0.5 : 1}` }} onClick={(e) => { handleChildrenCnt(e, -1) }}>
+                                        <RemoveIcon className={styles.incDecIcon} />
+                                    </div>
+                                    <h3>{childrenCnt}</h3>
+                                    <div className={styles.increseDecreaseIcon} onClick={(e) => { handleChildrenCnt(e, 1) }}>
+                                        <AddIcon className={styles.incDecIcon} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div style={{ textAlign: 'left', paddingLeft: "10px" }}><button className={styles.trevelersSelectingDone} onClick={(e) => { e.stopPropagation(); setTrevelersPopupOpen("none") }}>Done</button></div>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.searchBtnDiv}>
-                    <button style={{cursor: 'pointer'}}>Search</button>
+                    <button style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); handleHotelSearch(); }}>Search</button>
                 </div>
             </TabPanel>
             <TabPanel value={value} index={4}>
+                <div className={styles.hotelContainer}>
+                    <div className={`${styles.hotelBtns} ${styles.hotelGoingToBtn}`} onClick={(e) => { handleOpenLocation(e) }} style={{ width: "50%" }}>
+                        <LocationOnIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            {(goingToVal === "") ? "Things to do in" : <div><div className={styles.checkInHeading}>Things to do in</div>
+                                <div className={styles.checkinDate}>{goingToVal}</div></div>}
+                        </div>
+                        {/* -------Searching pop up bar------- */}
+                        <div className={styles.searchBox} style={{ display: `${openLocationSearch}` }}>
+                            <input ref={searchRef} value={query} onChange={(e) => { setQuery(e.target.value) }} type="text" className={styles.searchInput} placeholder="Where are you going?" />
+                            <div className={styles.searchResultHight}>
+                                <div className={styles.SearchResult}>
+                                    <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation("Mumbai", e) }}>
+                                        <RestoreIcon className={styles.searchIcon} />
+                                        <div className={styles.SearchResultsMapping}>
+                                            <strong>Mumbai</strong>
+                                            <div>IN</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {
+                                    searchQueryResult.map((data) => {
+                                        return <div key={uuid()} className={styles.SearchResult}>
+                                            <div className={styles.SearchResultIndividual} onClick={(e) => { handleCloseLocation(`${data.name}`, e) }}>
+                                                <LocationOnIcon className={styles.searchIcon} />
+                                                <div className={styles.SearchResultsMapping}>
+                                                    <strong>{data.name}</strong>
+                                                    <div>{data.country}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`${styles.hotelBtns} ${styles.hoteldateBtn}`} style={{ width: "21%" }}>
+                        <EventIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>From</div>
+                            <div className={styles.checkinDate}>{`${startDate.getDate()} ${monthNames[startDate.getMonth()]} ${sort_year(startDate)}`}</div>
+                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                <MaterialUIPickers props={{ handleStartDate }} type={"checkIn"} />
+                            </MuiPickersUtilsProvider>
+
+                        </div>
+                    </div>
+                    <div className={`${styles.hotelBtns} ${styles.hoteldateBtn}`} style={{ width: "21%" }}>
+                        <EventIcon className={styles.Icon} />
+                        <div className={styles.HeadingGoingto}>
+                            <div className={styles.checkInHeading}>To</div>
+                            <div className={styles.checkinDate}>{`${endDate.getDate()} ${monthNames[endDate.getMonth()]} ${sort_year(endDate)}`}</div>
+                        </div>
+                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                            <MaterialUIPickers props={{ handleEndDate }} startDate={startDate} type={"checkOut"} />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                </div>
                 <div className={styles.searchBtnDiv}>
-                    <button style={{cursor: 'pointer'}}>Search</button>
+                    <button style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); handleHotelSearch(); }}>Search</button>
                 </div>
             </TabPanel>
-            <TabPanel value={value} index={5}>
-                <div className={styles.searchBtnDiv}>
-                    <button style={{cursor: 'pointer'}}>Search</button>
-                </div>
-            </TabPanel>
-        </div>
+               </div>
     );
 }
 

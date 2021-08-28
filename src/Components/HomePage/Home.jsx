@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 
 
 export function HomePage() {
-    // const classes = useStyles();
 
     return (
         <div className={styles.container}>
@@ -54,9 +53,17 @@ export function HomePage() {
                         <div>
                             <div className={styles.info2Right} style={{ marginBottom: "10px" }}>
                                 <div className={styles.info2RightImg1}></div>
+                                <div style={{ width: "70%"}}>
+                                    <h2>Looking for a great hotel deal?</h2>
+                                    <p>Book a hotel under $99</p>
+                                </div>
                             </div>
                             <div className={styles.info2Right}>
-                                <div className={styles.info2RightImg1}></div>
+                                <div className={`${styles.info2RightImg1} ${styles.info2RightImg2}`}></div>
+                                <div style={{ width: "70%"}}>
+                                    <h2>Vacation Packages Under $400</h2>
+                                    <p>Book your flight and hotel together, and together, we can make it happen.</p>
+                                </div>
                             </div>
                         </div>
                     </Grid>
@@ -106,7 +113,14 @@ export function HomePage() {
                         <p>Traveling now or planning a trip for later? Let us help.</p>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     );
 }
+
+
+
+
+
+
+
