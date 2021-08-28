@@ -1,8 +1,8 @@
-import { LOGIN_FAILURE, LOGIN_SUCCESS } from "./ActionTypes";
+import { LOGIN_FAILURE, LOGIN_SUCCESS, LOG_OUT } from "./ActionTypes";
 
 const initState = {
   login: false,
-  token: "",
+  userName: "",
 };
 
 export const Authreducer = (state = initState, action) => {
@@ -11,13 +11,19 @@ export const Authreducer = (state = initState, action) => {
       return {
         ...state,
         login: true,
-        token: action.payload,
+        userName: action.payload,
       };
 
     case LOGIN_FAILURE:
       return {
         ...state,
         login: false,
+      };
+    case LOG_OUT:
+      return {
+        ...state,
+        login: false,
+        userName: "",
       };
 
     default: {
