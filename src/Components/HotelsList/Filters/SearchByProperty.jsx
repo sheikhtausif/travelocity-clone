@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export const SearchByProperty = () => {
+export const SearchByProperty = ({ handleQueryChange, query }) => {
   const classes = useStyles();
   return (
     <Wrapper>
@@ -31,6 +31,8 @@ export const SearchByProperty = () => {
         label="Property name"
         variant="outlined"
         color="primary"
+        value={query}
+        onChange={(e) => {handleQueryChange(e.target.value)}}
       />
       <Divider className="divider" />
       <div className="search-title">Filter by</div>
