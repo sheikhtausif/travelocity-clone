@@ -1,0 +1,46 @@
+.container {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex > div {
+    width: 20%;
+}
+
+.footer {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.footerLinks {
+    margin: 0;
+}
+
+.footerLinks > h3 {
+    color: #242C33;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.125rem;
+    margin: 0;
+}
+
+.footerLinks > li {
+    list-style-type: none;
+    margin: 10px 0px;
+    font-size: 0.75rem;
+    color: #0d5ab9;
+}
+
+.footerLinks > li > a:hover {
+    text-decoration: underline;
+}
+
+.footerLinks > li > a {
+    text-decoration: none;
+}
+
