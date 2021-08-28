@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { Navbar } from "../Components/Navbar/Navbar";
 import { MainHomePage } from "../Pages/Home_page";
 import { HotelsListPage } from "../Pages/HotelListPage";
 import MainHotelPage from "../Pages/MainHotelPage";
@@ -8,6 +9,7 @@ import { SignUpPage } from "../Pages/SignUp_page";
 export function RoutesPage() {
   return (
     <div>
+      <Navbar />
       <Switch>
         <Route exact path="/" component={MainHomePage} />
         <Route exact path="/hotels" component={HotelsListPage} />

@@ -40,7 +40,7 @@ const useStyle = makeStyles({
 
 const Wrapper = styled.div`
   width: 75%;
-  margin: auto;
+  margin: 30px auto;
   display: grid;
   grid-template-columns: 22% 63% 15%;
   grid-gap: 1.5rem;
