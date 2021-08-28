@@ -58,6 +58,11 @@ export function Footer() {
                         </ul>
                     </div>
                 </div>
+                <hr className={styles.footerHr} />
+                <div className={styles.license}>
+                    <p>© 2021 Travelscape LLC, an Expedia Group Company. All rights reserved.</p>
+                    <p>Travelocity, the Stars Design, and The Roaming Gnome Design are trademarks or registered trademarks of Travelscape LLC. CST# 2056372-50.</p>
+                </div>
             </div>
         </div>
     );

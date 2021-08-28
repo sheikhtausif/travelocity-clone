@@ -1,7 +1,8 @@
 .container {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 50px 0px 0px;
     overflow-x: hidden;
+    background: #f0f3f5;
 }
 
 .flex {
@@ -44,3 +45,21 @@
     text-decoration: none;
 }
 
+.footerHr {
+    border: 0;
+    border-top: 1px solid #bcc4cc;
+    clear: both;
+    display: block;
+    height: 1px;
+    margin: 0.938rem 0 1rem;
+    padding: 0;
+}
+
+
+.license > p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: #505C66;
+    font-size: 0.75rem;
+}

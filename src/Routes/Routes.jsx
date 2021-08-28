@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { Footer } from "../Components/Footer/Footer";
 import { Navbar } from "../Components/Navbar/Navbar";
 import { MainHomePage } from "../Pages/Home_page";
 import { HotelsListPage } from "../Pages/HotelListPage";
@@ -17,6 +18,7 @@ export function RoutesPage() {
         <Route exact path="/signUp" component={SignUpPage} />
         <Route exact path="/signIn" component={SignInPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }
