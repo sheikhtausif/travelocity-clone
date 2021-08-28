@@ -95,7 +95,6 @@ export const HotelList = () => {
   const handleSearchHotelByQuery = () => {
     setIsSearching(true);
     axios.get(`http://localhost:3001/data?name_like=${searchQuery}`).then((res) => {
-      console.log(res.data);
       setData(res.data);
       setHotels(res.data);
     }).catch((err) => {
@@ -142,13 +141,12 @@ export const HotelList = () => {
       });
   };
 
-  // console.log(hotelData);
 
   const handleStar = useCallback(
     (star) => {
       setloading(true);
       const newData = data.filter((item) => {
-        return item.starRating === star;
+        return item.starRating >= star;
       });
 
       setHotels(newData);
@@ -161,7 +159,6 @@ export const HotelList = () => {
   );
 
   const handleOpenHotel = (id) => {
-    console.log(id);
     history.push(`/hotels/${id}`);
   };
 
