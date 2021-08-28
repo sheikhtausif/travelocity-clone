@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import MainHotel from '../Components/HotelDetails/MainHotel'
 import { useParams } from 'react-router-dom'
 import { useAxios } from '../Hooks/useAxios'
@@ -7,8 +7,15 @@ import logo from '../logo.svg'
 
 const MainHotelPage = () => {
     const { id } = useParams()
+    const [isLoading, setIsLoading] = useState(false)
 
     const { hotelData } = useAxios(`http://localhost:3001/data/?hotelId=${id}`)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(true)
+        }, 2500);
+    }, [])
 
     const styles = {
         progress: {
@@ -27,7 +34,7 @@ const MainHotelPage = () => {
 
     return (
         <>
-            {hotelData.length > 0 ? <div>
+            {isLoading && hotelData.length > 0 ? <div>
                 <MainHotel hotelData={hotelData[0]} />
             </div>
                 : <div style={styles.progress}>

@@ -1,4 +1,3 @@
-import { Box } from '@material-ui/core'
 import React from 'react'
 import styles from './styles/amenities.module.css'
 import WifiIcon from '@material-ui/icons/Wifi';
@@ -15,11 +14,7 @@ import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import OutdoorGrillIcon from '@material-ui/icons/OutdoorGrill';
 import HotelIcon from '@material-ui/icons/Hotel';
 import BathtubIcon from '@material-ui/icons/Bathtub';
-import { SiAmericanexpress } from 'react-icons/si';
-import { FaCcDinersClub } from 'react-icons/fa';
-import { FaCcJcb } from 'react-icons/fa';
-import { FaCcMastercard } from 'react-icons/fa';
-import { RiVisaFill } from 'react-icons/ri';
+import { Box } from '@material-ui/core'
 
 
 const Amenities = () => {
@@ -325,7 +320,8 @@ const Amenities = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.policies_div}>
+
+            {/* <div className={styles.policies_div}>
                 <div className={styles.policies}>
                     <div className={styles.left}>
                         <h3>Policies</h3>
@@ -386,7 +382,7 @@ const Amenities = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
 
 
