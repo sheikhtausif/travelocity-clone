@@ -1,10 +1,15 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { logOut } from "../../Store/Action";
 
 export function Navbar() {
     const userName = useSelector((state) => state.userName);
+    const dispatch = useDispatch();
+
+    const handleSignOut = () => {
+        dispatch(logOut());
+    }
 
     return (
         <div className={styles.container}>
@@ -20,7 +25,7 @@ export function Navbar() {
                             <li><a className={styles.travelNavLink} href="#">Support</a></li>
                             <li><a className={styles.travelNavLink} href="#">Trips</a></li>
                             <li><Link className={styles.travelNavLink} to="/signIn">{(userName === "") ? "Sign In" : userName}</Link></li>
-                            <li><Link className={styles.travelNavLink} style={{display: `${(userName === "") ? "none" : "inline"}`}} to="/">Sign out</Link></li>
+                            <li><Link className={styles.travelNavLink} style={{display: `${(userName === "") ? "none" : "inline"}`}} to="#" onClick={handleSignOut}>Sign out</Link></li>
                         </ul>
                     </div>
                 </div>
