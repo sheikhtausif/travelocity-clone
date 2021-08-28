@@ -15,7 +15,7 @@ export function Navbar() {
                             <li><a className={styles.travelNavLink} href="#">List your property</a></li>
                             <li><a className={styles.travelNavLink} href="#">Support</a></li>
                             <li><a className={styles.travelNavLink} href="#">Trips</a></li>
-                            <li><a className={styles.travelNavLink} href="#">Sign In</a></li>
+                            <li><Link className={styles.travelNavLink} to="/signIn">Sign In</Link></li>
                         </ul>
                     </div>
                 </div>
