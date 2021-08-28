@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
 import styles from './styles/room.module.css'
+import { useState } from 'react'
 import { MdNavigateNext } from 'react-icons/md';
 import { BiInfoCircle } from 'react-icons/bi';
 import Box from '@material-ui/core/Box'
@@ -21,18 +21,17 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 
 
 const Rooms = ({ room }) => {
-    
+
     const [open, setOpen] = useState(false);
+    const [price, setPrice] = useState(0)
 
     const handleOpen = () => {
         setOpen(true);
     };
-
     const handleClose = () => {
         setOpen(false);
     };
 
-    const [price, setPrice] = useState(0)
     const handlePricesInc = () => {
         setPrice(118)
     }
@@ -63,11 +62,11 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>{room.rooPrice}</h3>
+                    <h3>{room.roomPrice}</h3>
                     <small>per night</small>
-                    <small style={{ fontWeight: 'bold' }}>${room.rooPrice+price} total</small>
+                    <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
-                    <button style={{ width: '120px', marginRight: '0' }}>Pay now</button>
+                    <button style={{ width: '100px', marginLeft: '71px' }}>Pay now</button>
                 </div>
             </Box>
             <Box className={styles.flex_4}>
@@ -80,10 +79,10 @@ const Rooms = ({ room }) => {
                 </div>
                 <div>
                     <h3>price</h3>
-                    <small>{room.rooPrice}</small>
-                    <small style={{ fontWeight: 'bold' }}>${room.rooPrice+price} total</small>
+                    <small>{room.roomPrice}</small>
+                    <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
-                    <button>Pay at property</button>
+                    <button style={{ width: '140px', marginLeft: '31px' }}>Pay at property</button>
                 </div>
             </Box>
         </div>
