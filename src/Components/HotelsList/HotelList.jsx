@@ -71,17 +71,43 @@ const Wrapper = styled.div`
 `;
 
 export const HotelList = () => {
-  // const { hotelData } = useAxios("http://localhost:3001/data");
   const [hotels, setHotels] = useState([]);
   const [data, setData] = useState([]);
   const [loading, setloading] = useState(false);
   const classes = useStyle();
   const [priceFilter, setPriceFilter] = useState("");
   const history = useHistory();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     getData();
   }, []);
+
+  useEffect(() => {
+    if (isSearching) {
+      return;
+    }
+
+    handleSearchHotelByQuery();
+  }, [searchQuery])
+
+  const handleSearchHotelByQuery = () => {
+    setIsSearching(true);
+    axios.get(`http://localhost:3001/data?name_like=${searchQuery}`).then((res) => {
+      console.log(res.data);
+      setData(res.data);
+      setHotels(res.data);
+    }).catch((err) => {
+      console.log(err);
+    }).finally(() => {
+      setIsSearching(false);
+    })
+  }
+
+  const handleQueryChange = (val) => {
+    setSearchQuery(val);
+  }
 
   const handleChange = (event) => {
     const range = event.target.value.split(" ").map(Number);
@@ -143,7 +169,7 @@ export const HotelList = () => {
     <>
       <Wrapper>
         <div className="sorting">
-          <SearchByProperty />
+          <SearchByProperty handleQueryChange={handleQueryChange} query={searchQuery} />
 
           {/* ---------------------------------------------------------------------------------------------------Star rating  */}
           <div className="filter-title">Star rating</div>
