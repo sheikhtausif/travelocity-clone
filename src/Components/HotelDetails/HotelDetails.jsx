@@ -1,10 +1,11 @@
 import React from 'react'
+import Rooms from './Rooms'
 import AboutArea from './AboutArea'
 import Amenities from './Amenities'
 // import HotelMap from './HotelMap'
 import HotelOverview from './HotelOverview'
 import Policies from './Policies'
-import Rooms from './Rooms'
+// import Review from './Review'
 import styles from './styles/hotelDetails.module.css'
 
 const HotelDetails = ({ hotelData }) => {
@@ -69,6 +70,9 @@ const HotelDetails = ({ hotelData }) => {
             </div>
             <div id="policies">
                 <Policies />
+            </div>
+            <div id="reviews">
+                {/* <Review /> */}
             </div>
         </>
     )

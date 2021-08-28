@@ -1,0 +1,19 @@
+.review_cont {
+    background: #FFF;
+    border-radius: 12px;
+    padding: 22px 14px;
+    margin-top: 20px;
+}
+
+.review {
+    display: flex;
+    gap: 30px;
+}
+
+.left {
+    width: 25%;
+}
+
+.right {
+    width: 70%;
+}

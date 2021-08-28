@@ -62,7 +62,7 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>{room.roomPrice}</h3>
+                    <h3>${room.roomPrice}</h3>
                     <small>per night</small>
                     <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
@@ -78,8 +78,8 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>price</h3>
-                    <small>{room.roomPrice}</small>
+                    <h3>${room.roomPrice}</h3>
+                    <small>per night</small>
                     <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
                     <button style={{ width: '140px', marginLeft: '31px' }}>Pay at property</button>
