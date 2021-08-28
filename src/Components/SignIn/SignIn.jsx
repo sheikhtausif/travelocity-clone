@@ -11,13 +11,13 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { useState } from "react";
 import axios from "axios";
 import swal from "sweetalert";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginFailure, loginSuccess } from "../../Store/Action";
 import { useHistory } from "react-router-dom";
 
@@ -83,6 +83,11 @@ export const SignIn = () => {
   const [input, setInput] = useState(initState);
   const dispatch = useDispatch();
   const history = useHistory();
+  const userName = useSelector((state)=>state.userName);
+
+  if(userName !== ""){
+    return <Redirect to="/" />
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -190,7 +195,7 @@ export const SignIn = () => {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link to="#" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>

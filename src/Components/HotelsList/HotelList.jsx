@@ -162,6 +162,10 @@ export const HotelList = () => {
     history.push(`/hotels/${id}`);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <>
       <Wrapper>
