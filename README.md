@@ -46,8 +46,8 @@ This is the clone of the travelocity website. Travelocity is a online travel age
   <a href="https://drive.google.com/file/d/19y80aIQ5vILaLQNsjLNZPbzLdnRvDyua/view?usp=sharing">Click here to watch demo video</a>
   
 ## Some screenshots of the project
-<img src="./Screenshots/Home1" />
-<img src="./Screenshots/Home2" />
+<img src="./Screenshots/Home1.png" />
+<img src="./Screenshots/Home2.png" />
 
 ## Team members
 <ul>
