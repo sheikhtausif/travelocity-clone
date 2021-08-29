@@ -29,7 +29,8 @@ const MainHotelPage = () => {
 
         img: {
             width: '100px',
-        }
+        },
+
     }
 
     return (

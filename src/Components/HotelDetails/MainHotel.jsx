@@ -13,19 +13,17 @@ const MainHotel = ({ hotelData }) => {
         <>
             <div className={styles.container}>
                 <div className={styles.mainBox}>
-                    <div className={styles.left}>
+                    <div className={styles.content}>
                         <div className={styles.flex}>
                             <KeyboardBackspaceIcon onClick={() => history.push('/hotels')} />
                             <p onClick={() => history.push('/hotels')}>See all properties</p>
                         </div>
                         <HotelDetails hotelData={hotelData} />
                     </div>
-                    <div className={styles.right}>
-                        <Ads />
-                        <Ads />
-                        <Ads />
-                        <Ads />
-                        <Ads style={{ position: 'fixed', top: '50', }} />
+                    <div>
+                        <div style={{ position: 'sticky', top: '10px' }}>
+                            <Ads />
+                        </div>
                     </div>
                 </div>
             </div>

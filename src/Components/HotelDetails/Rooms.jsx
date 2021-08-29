@@ -93,8 +93,8 @@ const Rooms = ({ room }) => {
             <div className={styles.room_div}>
                 <img src={room.images[0].url} alt="" />
                 <div className={styles.room_details}>
-                    <h3 style={{ fontSize: '17px' }}>{room.name}</h3>
-                    <p>4.7/5 guest room rating</p>
+                    <h3 style={{ fontSize: '17px', marginTop: '10px' }}>{room.name}</h3>
+                    <p style={{ marginTop: '10px' }}>4.7 / 5 guest room rating</p>
                     <Box className={styles.flex_1}>
                         <SquareFootIcon />
                         <p>{Math.floor((Math.random() * 300) + 99)} Square fit</p>

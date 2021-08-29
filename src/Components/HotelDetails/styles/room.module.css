@@ -19,7 +19,7 @@
 }
 
 .room_details>:nth-child(n) {
-    margin-top: 10px;
+    margin-top: -10px;
 }
 
 .room_details>small {
