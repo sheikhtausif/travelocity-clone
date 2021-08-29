@@ -3,6 +3,7 @@ import { PaymentForm } from "./PaymentForm";
 import { PriceDetail } from "./PriceDetail";
 import styled from "styled-components";
 import { useSelector } from 'react-redux'
+import { useEffect } from "react";
 
 const Wrapper = styled.div`
   width: 80%;
@@ -13,6 +14,10 @@ const Wrapper = styled.div`
 export const Payment = () => {
 
   const { paymentAmount } = useSelector(state => state)
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
 
   return (
     <Wrapper>

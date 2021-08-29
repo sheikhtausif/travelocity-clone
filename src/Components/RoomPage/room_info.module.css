@@ -78,7 +78,7 @@
 .priceDetails>h4 {
     font-size: 0.875rem;
     margin-top: 10px;
-    padding: 5px;
+    padding: 5px 0px;
 }
 
 .cancellationPolicyMoreDetails {
@@ -111,6 +111,7 @@
     border-radius: 20px;
     padding: 2px 0px;
     font-size: 0.75rem;
+    color: white;
 }
 
 .originalPrice {

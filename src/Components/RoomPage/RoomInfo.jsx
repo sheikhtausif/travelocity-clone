@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Slider from './Slider';
 import { ArrowBack } from '@material-ui/icons';
 import styles from "./room_info.module.css"
@@ -15,6 +15,10 @@ const RoomInfo = () => {
     const discountedPrice = Math.floor(paymentAmount * 0.9)
 
     const history = useHistory()
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const ImageData = [
         {
@@ -47,7 +51,7 @@ const RoomInfo = () => {
     }
 
     return (
-        <div style={{ color: 'white' }}>
+        <div style={{ background: 'white' }}>
             <div className={styles.goingBackButton}>
                 <ArrowBack onClick={handleBack} style={{ color: '#0d5ab9', cursor: 'pointer' }} />
                 <h3 className={styles.adjustRoomIcon}>Room information</h3>
