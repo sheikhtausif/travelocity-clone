@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   }
 
   .progress > img {
+    margin-bottom: 10px;
     width: 100px;
   }
 `;

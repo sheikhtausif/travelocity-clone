@@ -9,6 +9,11 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
+const price = {
+  rate: 125,
+  tax: 20,
+};
+
 export const Payment = () => {
   return (
     <Wrapper>
@@ -17,7 +22,7 @@ export const Payment = () => {
         <FinalSubmit />
       </div>
 
-      <PriceDetail />
+      <PriceDetail price={price} />
     </Wrapper>
   );
 };

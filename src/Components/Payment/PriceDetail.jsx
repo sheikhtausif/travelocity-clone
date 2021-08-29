@@ -41,24 +41,24 @@ const Wrapper = styled.div`
   }
 `;
 
-export const PriceDetail = () => {
+export const PriceDetail = ({ price }) => {
   return (
     <Wrapper>
       <p className="title">Price Details</p>
       <Divider />
       <div className="room-detail">
         <p>1 room x 1 night</p>
-        <p>$Price</p>
+        <p>${price.rate}</p>
       </div>
       <div className="save">You saved 20%</div>
       <div className="taxes">
         <p>Taxes and fees</p>
-        <p>$Taxes</p>
+        <p>${price.tax}</p>
       </div>
       <Divider />
       <div className="total">
         <p>Total</p>
-        <p>$Total</p>
+        <p>${price.rate + price.tax}</p>
       </div>
       <p className="coupon">Use a coupon, credit, or promotion code</p>
     </Wrapper>
