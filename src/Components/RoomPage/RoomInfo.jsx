@@ -28,7 +28,7 @@ const RoomInfo = () => {
     return (
         <div style={{color: 'white'}}>
             <div className={styles.goingBackButton}>
-                <Link href="/hotels:1"><ArrowBack /></Link>
+                <Link to="/hotels:1"><ArrowBack /></Link>
                 <h3 className={styles.adjustRoomIcon}>Room information</h3>
             </div>
             <div className={styles.travelDisplayFlex}>
