@@ -15,7 +15,7 @@
 }
 
 .right {
-    width: 70%;
+    width: 72%;
 }
 
 .first {
@@ -62,4 +62,38 @@
 
 .third p {
     font-size: 13.5px;
+}
+
+.right, .right>div {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.right>div {
+    border-bottom: 1px solid #9fa0a1;
+    padding: 5px 12px 12px 12px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right>button {
+    width: 122px;
+    padding: 9px;
+    color: #2A6EC1;
+    background: #FFF;
+    border: 1px solid #2A6EC1;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.right>button:hover {
+    background: #eaf2fc
 }
