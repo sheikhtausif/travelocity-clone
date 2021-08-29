@@ -27,4 +27,5 @@ This is the clone of the travelocity website. Travelocity is a online travel age
   <li>Signin/Signup</li>
   <li>Hotel search across world's cities</li>
   <li>Hotel Booking</li>
+  <li>Filter hotels list by their ratings, hotel name and price etc.</li>
 </ul>
