@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './styles/mainHotel.module.css'
 import Ads from './Ads'
 import HotelDetails from './HotelDetails'
@@ -8,6 +8,10 @@ import { useHistory } from 'react-router-dom'
 const MainHotel = ({ hotelData, id }) => {
 
     const history = useHistory()
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <>
