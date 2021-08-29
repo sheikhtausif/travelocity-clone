@@ -55,25 +55,29 @@ export const FinalSubmit = () => {
     const successPayment = () => {
         swal({
             title: "Are you sure?",
-            icon: "warning",
+            icon: "info",
             buttons: true,
-            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                swal("order_id #57RYE556AB7568", {
+                    icon: "success",
+                    button: false,
+                    title: "Your booking has been successful!",
+                    timer: 3000,
+                    confirmButtonColor: "#2A6EC1",
+                });
+                setTimeout(() => {
+                    history.push('/')
+                }, 3200)
+            } else {
+                swal("Your payment has been cancelled!", {
+                    icon: "error",
+                    button: false,
+                    timer: 1500,
+                });
+            }
         })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("order_id #57RYE556AB7568", {
-                        icon: "success",
-                        title: "Your booking has been successful!"
-                    });
-                } else {
-                    swal("Your payment has been cancelled!",);
-                }
-            })
-            .then(() => {
-                history.push('/')
-            })
-        // setTimeout(() => {
-        // }, 4000)
+
     }
 
     return (
