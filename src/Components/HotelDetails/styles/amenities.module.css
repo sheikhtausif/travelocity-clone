@@ -10,6 +10,11 @@
     gap: 30px;
 }
 
+.amenities h3 {
+    margin: 0;
+    padding: 0;
+}
+
 .left {
     width: 25%;
 }

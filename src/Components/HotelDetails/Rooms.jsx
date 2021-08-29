@@ -18,14 +18,21 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Modal from '@material-ui/core/Modal';
 import CloseIcon from '@material-ui/icons/Close';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import { useDispatch } from 'react-redux'
+import { paymentType } from '../../Store/Action'
+import { useHistory } from 'react-router-dom'
 
-
-const Rooms = ({ room }) => {
+const Rooms = ({ room, hId }) => {
+    const history = useHistory()
+    const dispatch = useDispatch()
 
     const [open, setOpen] = useState(false);
     const [price, setPrice] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(room.roomPrice + price)
+    console.log('totalPrice:', totalPrice)
 
     const handleOpen = () => {
+        dispatch(paymentType(totalPrice))
         setOpen(true);
     };
     const handleClose = () => {
@@ -37,6 +44,16 @@ const Rooms = ({ room }) => {
     }
     const handlePricesDec = () => {
         setPrice(0)
+    }
+    const handlePaymentPage = () => {
+        history.push('/payment')
+    }
+
+    const handleOpenRoom = (id) => {
+        // history.push('roomPage')
+        dispatch(paymentType(totalPrice))
+        history.push(`/hotels/${hId}/${id}`);
+        // console.log(id, hId)
     }
 
     const modal = (
@@ -62,11 +79,11 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>${room.roomPrice}</h3>
+                    <h3 style={{ margin: '0', padding: '0' }}>${room.roomPrice}</h3>
                     <small>per night</small>
                     <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
-                    <button style={{ width: '100px', marginLeft: '71px' }}>Pay now</button>
+                    <button style={{ width: '100px', marginLeft: '71px' }} onClick={handlePaymentPage}>Pay now</button>
                 </div>
             </Box>
             <Box className={styles.flex_4}>
@@ -78,11 +95,11 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>${room.roomPrice}</h3>
+                    <h3 style={{ margin: '0', padding: '0' }}>${room.roomPrice}</h3>
                     <small>per night</small>
                     <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
-                    <button style={{ width: '140px', marginLeft: '31px' }}>Pay at property</button>
+                    <button style={{ width: '140px', marginLeft: '31px' }} onClick={handlePaymentPage}>Pay at property</button>
                 </div>
             </Box>
         </div>
@@ -91,7 +108,7 @@ const Rooms = ({ room }) => {
     return (
         <div>
             <div className={styles.room_div}>
-                <img src={room.images[0].url} alt="" />
+                <img src={room.images[0].url} alt="" onClick={() => handleOpenRoom(room.roomTypeId)} />
                 <div className={styles.room_details}>
                     <h3 style={{ fontSize: '17px', marginTop: '10px' }}>{room.name}</h3>
                     <p style={{ marginTop: '10px' }}>4.7 / 5 guest room rating</p>

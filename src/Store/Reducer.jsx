@@ -1,9 +1,10 @@
 import { getData, setData } from "../LocalStorage/LocalStorage";
-import { LOGIN_FAILURE, LOGIN_SUCCESS, LOG_OUT } from "./ActionTypes";
+import { LOGIN_FAILURE, LOGIN_SUCCESS, LOG_OUT, PAYMENT_TYPE } from "./ActionTypes";
 
 const initState = {
   login: false,
   userName: getData("username") || "",
+  paymentAmount: null
 };
 
 export const Authreducer = (state = initState, action) => {
@@ -28,6 +29,12 @@ export const Authreducer = (state = initState, action) => {
         login: false,
         userName: "",
       };
+    case PAYMENT_TYPE:
+      console.log(action.payload);
+      return {
+        ...state,
+        paymentAmount: action.payload
+      }
 
     default: {
       return state;

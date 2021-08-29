@@ -5,7 +5,7 @@ import HotelDetails from './HotelDetails'
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import { useHistory } from 'react-router-dom'
 
-const MainHotel = ({ hotelData }) => {
+const MainHotel = ({ hotelData, id }) => {
 
     const history = useHistory()
 
@@ -18,7 +18,7 @@ const MainHotel = ({ hotelData }) => {
                             <KeyboardBackspaceIcon onClick={() => history.push('/hotels')} />
                             <p onClick={() => history.push('/hotels')}>See all properties</p>
                         </div>
-                        <HotelDetails hotelData={hotelData} />
+                        <HotelDetails hotelData={hotelData} id={id} />
                     </div>
                     <div>
                         <div style={{ position: 'sticky', top: '10px' }}>

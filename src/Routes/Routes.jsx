@@ -19,8 +19,8 @@ export function RoutesPage() {
         <Route exact path="/hotels/:id" component={MainHotelPage} />
         <Route exact path="/signUp" component={SignUpPage} />
         <Route exact path="/signIn" component={SignInPage} />
-        <Route exact path="/payment/:id" component={PaymentPage} />
-        <Route exact path="/roomPage" component={RoomInfo} />
+        <Route exact path="/payment" component={PaymentPage} />
+        <Route exact path="/hotels/:id/:id" component={RoomInfo} />
       </Switch>
       <Footer />
     </div>

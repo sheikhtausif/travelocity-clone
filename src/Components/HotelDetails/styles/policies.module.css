@@ -28,6 +28,11 @@
     margin-bottom: 12px;
 }
 
+.policies h3 {
+    margin: 0;
+    padding: 0;
+}
+
 .right_2 {
     width: 62%;
 }
