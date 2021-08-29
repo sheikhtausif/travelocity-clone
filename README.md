@@ -70,7 +70,7 @@ This is the clone of the travelocity website. Travelocity is a online travel age
     </ul>
   <li>Mohd Tausif</li>
     <ul>
-      <li>Gmail (mohdtausif411@gmail.com)</li>
+      <li>Gmail (mohammadtausif14@gmail.com)</li>
       <li>Github <a href="https://github.com/sheikhtausif">https://github.com/sheikhtausif</a></li>
     </ul>
   <li>Millind</li>
@@ -79,3 +79,7 @@ This is the clone of the travelocity website. Travelocity is a online travel age
       <li>Github <a href="https://github.com/Milind-dev">https://github.com/Milind-dev</a></li>
     </ul>
 </ul>
+
+## Read project blog
+<a href="https://chandan1499.hashnode.dev/travelocity-clone" />
+
