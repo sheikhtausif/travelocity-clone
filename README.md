@@ -21,6 +21,17 @@ This is the clone of the travelocity website. Travelocity is a online travel age
   <li>CSS</li>
 </ul>
 
+## Used libraries
+<ul>
+  <li>node modules</li>
+  <li>Styled-Components</li>
+  <li>axios</li>
+  <li>React</li>
+  <li>Redux</li>
+  <li>React-router-dom</li>
+  <li>Material UI</li>
+  <li>React Icon</li>
+</ul>
 
 ## Features
 <ul>
@@ -33,3 +44,30 @@ This is the clone of the travelocity website. Travelocity is a online travel age
 
 ## Demo video of the project
   <a href="https://drive.google.com/file/d/19y80aIQ5vILaLQNsjLNZPbzLdnRvDyua/view?usp=sharing">Click here to watch demo video</a>
+  
+## Some screenshots of the project
+<img src="./Screenshots/Home1" />
+<img src="./Screenshots/Home2" />
+
+## Team members
+<ul>
+  <li>Chandan Gupta</li>
+    <ul>
+      <li>Gmail (gupta.chandan1499@gmail.com)</li>
+      <li>Github <a href="https://github.com/chandan1499">https://github.com/chandan1499</a></li>
+    </ul>
+  <li>Aditya Kumar</li>
+    <ul>
+      <li>Gmail (onlyaditya001@gmail.com)</li>
+      <li>Github <a href="https://github.com/onlyaditya">https://github.com/onlyaditya</a></li>
+    </ul>
+  <li>Mohd Tausif</li>
+    <ul>
+      <li>Github <a href="https://github.com/sheikhtausif">https://github.com/sheikhtausif</a></li>
+    </ul>
+  <li>Millind</li>
+    <ul>
+      <li>Gmail (milinddev1011@gmail.com)</li>
+      <li>Github <a href="https://github.com/Milind-dev">https://github.com/Milind-dev</a></li>
+    </ul>
+</ul>
