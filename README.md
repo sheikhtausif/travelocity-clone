@@ -48,6 +48,13 @@ This is the clone of the travelocity website. Travelocity is a online travel age
 ## Some screenshots of the project
 <img src="./Screenshots/Home1.png" />
 <img src="./Screenshots/Home2.png" />
+<img src="./Screenshots/HotelLists.png" />
+<img src="./Screenshots/HotelList1.png" />
+<img src="./Screenshots/RoomDetails.png" />
+<img src="./Screenshots/RoomReserve.png" />
+<img src="./Screenshots/HotelRoomImages.png" />
+<img src="./Screenshots/Signin.png" />
+<img src="./Screenshots/Sign_up.png" />
 
 ## Team members
 <ul>
@@ -63,6 +70,7 @@ This is the clone of the travelocity website. Travelocity is a online travel age
     </ul>
   <li>Mohd Tausif</li>
     <ul>
+      <li>Gmail (mohdtausif411@gmail.com)</li>
       <li>Github <a href="https://github.com/sheikhtausif">https://github.com/sheikhtausif</a></li>
     </ul>
   <li>Millind</li>
