@@ -7,6 +7,8 @@ export function Navbar() {
     const userName = useSelector((state) => state.userName);
     const dispatch = useDispatch();
 
+    console.log(userName);
+
     const handleSignOut = () => {
         dispatch(logOut());
     }
