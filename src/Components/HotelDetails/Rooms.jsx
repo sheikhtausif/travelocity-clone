@@ -25,6 +25,9 @@ const Rooms = ({ room }) => {
     const [open, setOpen] = useState(false);
     const [price, setPrice] = useState(0)
 
+    const totalPrice = room.roomPrice + price
+    console.log('totalPrice:', totalPrice)
+
     const handleOpen = () => {
         setOpen(true);
     };
@@ -37,6 +40,10 @@ const Rooms = ({ room }) => {
     }
     const handlePricesDec = () => {
         setPrice(0)
+    }
+
+    const handlePayment = () => {
+
     }
 
     const modal = (
@@ -62,11 +69,11 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>${room.roomPrice}</h3>
+                    <h3 style={{ margin: '0', padding: '0' }}>${room.roomPrice}</h3>
                     <small>per night</small>
                     <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
-                    <button style={{ width: '100px', marginLeft: '71px' }}>Pay now</button>
+                    <button style={{ width: '100px', marginLeft: '71px' }} onClick={handlePayment}>Pay now</button>
                 </div>
             </Box>
             <Box className={styles.flex_4}>
@@ -78,11 +85,11 @@ const Rooms = ({ room }) => {
                     </ul>
                 </div>
                 <div>
-                    <h3>${room.roomPrice}</h3>
+                    <h3 style={{ margin: '0', padding: '0' }}>${room.roomPrice}</h3>
                     <small>per night</small>
                     <small style={{ fontWeight: 'bold' }}>${room.roomPrice + price} total</small>
                     <small>included tax & fees</small>
-                    <button style={{ width: '140px', marginLeft: '31px' }}>Pay at property</button>
+                    <button style={{ width: '140px', marginLeft: '31px' }} onClick={handlePayment}>Pay at property</button>
                 </div>
             </Box>
         </div>
