@@ -26,7 +26,7 @@ const RoomInfo = () => {
     ];
 
     return (
-        <div style={{color: 'white'}}>
+        <div style={{ color: 'white' }}>
             <div className={styles.goingBackButton}>
                 <Link to="/hotels:1"><ArrowBack /></Link>
                 <h3 className={styles.adjustRoomIcon}>Room information</h3>
@@ -56,7 +56,7 @@ const RoomInfo = () => {
                     <h1 className={styles.roomAmenties}>Room amenities</h1>
                     <div>
                         <div className={styles.featureComfort}>
-                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fillRule="evenodd" d="M11 7h8a4 4 0 014 4v9h-2v-3H3v3H1V5h2v9h8V7zm-1 3a3 3 0 11-6 0 3 3 0 016 0z" clipRule="evenodd"></path></svg></svg>
+                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fill="#242c33" fillRule="evenodd" d="M11 7h8a4 4 0 014 4v9h-2v-3H3v3H1V5h2v9h8V7zm-1 3a3 3 0 11-6 0 3 3 0 016 0z" clipRule="evenodd"></path></svg></svg>
                             <h3 className={styles.featureHeading}>Bedroom</h3>
                         </div>
                         <ul className={styles.roomService}>
@@ -69,7 +69,7 @@ const RoomInfo = () => {
                     </div>
                     <div>
                         <div className={styles.featureComfort}>
-                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fillRule="evenodd" d="M9.35 3.9C6.9 3.9 5 5.9 5 8.36V22H3V8.36A6.36 6.36 0 019.35 2c3.5 0 6.15 2.85 6.15 6.36V9.8h2c1.13 0 2.14.66 2.6 1.69l.9 1.99H8.1l.9-2a2.85 2.85 0 012.6-1.68h2V8.36c0-2.46-1.79-4.46-4.25-4.46z" clipRule="evenodd"></path><path d="M12.5 16.5a1 1 0 11-2 0 1 1 0 012 0zm6 0a1 1 0 11-2 0 1 1 0 012 0zm-8.5 4a1 1 0 11-2 0 1 1 0 012 0zm5.5 0a1 1 0 11-2 0 1 1 0 012 0zm5.5 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg></svg>
+                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fill="#242c33" fillRule="evenodd" d="M9.35 3.9C6.9 3.9 5 5.9 5 8.36V22H3V8.36A6.36 6.36 0 019.35 2c3.5 0 6.15 2.85 6.15 6.36V9.8h2c1.13 0 2.14.66 2.6 1.69l.9 1.99H8.1l.9-2a2.85 2.85 0 012.6-1.68h2V8.36c0-2.46-1.79-4.46-4.25-4.46z" clipRule="evenodd"></path><path d="M12.5 16.5a1 1 0 11-2 0 1 1 0 012 0zm6 0a1 1 0 11-2 0 1 1 0 012 0zm-8.5 4a1 1 0 11-2 0 1 1 0 012 0zm5.5 0a1 1 0 11-2 0 1 1 0 012 0zm5.5 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg></svg>
                             <h3 className={styles.featureHeading}>Bathroom</h3>
                         </div>
                         <ul className={styles.roomService}>
@@ -82,7 +82,7 @@ const RoomInfo = () => {
                     </div>
                     <div>
                         <div className={styles.featureComfort}>
-                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fillRule="evenodd" d="M20.15 10.15c-1.59 1.59-3.74 2.09-5.27 1.38L13.41 13l6.88 6.88-1.41 1.41L12 14.41l-6.89 6.87-1.41-1.41 9.76-9.76c-.71-1.53-.21-3.68 1.38-5.27 1.92-1.91 4.66-2.27 6.12-.81 1.47 1.47 1.1 4.21-.81 6.12zm-9.22.36L8.1 13.34 3.91 9.16a4 4 0 010-5.66l7.02 7.01z" clipRule="evenodd"></path></svg></svg>
+                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fill="#242c33" fillRule="evenodd" d="M20.15 10.15c-1.59 1.59-3.74 2.09-5.27 1.38L13.41 13l6.88 6.88-1.41 1.41L12 14.41l-6.89 6.87-1.41-1.41 9.76-9.76c-.71-1.53-.21-3.68 1.38-5.27 1.92-1.91 4.66-2.27 6.12-.81 1.47 1.47 1.1 4.21-.81 6.12zm-9.22.36L8.1 13.34 3.91 9.16a4 4 0 010-5.66l7.02 7.01z" clipRule="evenodd"></path></svg></svg>
                             <h3 className={styles.featureHeading}>Food and Drink</h3>
                         </div>
                         <ul className={styles.roomService}>
@@ -91,7 +91,7 @@ const RoomInfo = () => {
                     </div>
                     <div>
                         <div className={styles.featureComfort}>
-                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg></svg>
+                            <svg width="25px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fill="#242c33" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path></svg></svg>
                             <h3 className={styles.featureHeading}>More</h3>
                         </div>
                         <ul className={styles.roomService}>
@@ -107,6 +107,27 @@ const RoomInfo = () => {
                 <div>
                     <div>
                         <Slider slides={ImageData} />
+                    </div>
+                    <h1 className={styles.priceDetailsHeading}>Price Details</h1>
+                    <div className={styles.priceDetails}>
+                        <h4>Cancellation policy</h4>
+                        <div className={styles.cancellationPolicyMoreDetails}>
+                            <a href="#">More details on all policy options</a>
+                            <svg width="18px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fill="#505c66" fillRule="evenodd" d="M2 12a10 10 0 1120 0 10 10 0 01-20 0zm11-1v6h-2v-6h2zm-1 9a8.01 8.01 0 010-16 8.01 8.01 0 010 16zm1-13v2h-2V7h2z" clipRule="evenodd"></path></svg></svg>
+                        </div>
+                        <li>Fully refundable on cancellation 12hrs. before check in</li>
+                        <li>50% refundable on cancellation 30mins. before check in</li>
+                        <hr />
+                        <div>
+                            <div className={styles.offerDiscount}>10% off</div>
+                        </div>
+                        <div className={styles.originalPrice}>$86</div>
+                        <div className={styles.discountedPrice}>$78</div>
+                        <div className={styles.priceInfoWithDetails}>Per night</div>
+                        <div className={styles.priceInfoWithDetails}>Included taxes and fees</div>
+                        <div className={styles.reserveBtn}>
+                            <button>Reserve</button>
+                        </div>
                     </div>
                 </div>
             </div>

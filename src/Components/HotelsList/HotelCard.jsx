@@ -33,6 +33,10 @@ const Wrapper = styled.div`
     margin: 0.1rem 0;
   }
 
+  .hotel-name-add {
+    margin-top: 5px;
+  }
+
   .hotel-city {
     color: #505c66;
     padding-bottom: 0.5rem;
@@ -94,7 +98,7 @@ export const Hotelcard = ({ data, handleOpenHotel }) => {
     >
       <img className="card-image" src={data.images[1].url} alt="" />
       <div className="hotel-detail">
-        <div>
+        <div className="hotel-name-add">
           <h3 className="hotel-name">{data.name}</h3>
           <div className="hotel-city">{data.address.city}</div>
         </div>

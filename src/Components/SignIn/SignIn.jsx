@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    background: "#57a0d7",
   },
   option: {
     display: "flex",
@@ -49,6 +50,8 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     marginBottom: "20px",
   },
+
+  btnColor: {},
 
   icon: {
     width: "15px",
