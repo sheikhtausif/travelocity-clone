@@ -5,7 +5,7 @@ This is the clone of the travelocity website. Travelocity is a online travel age
 <ul>
   <li>Clone the repo and run following command to start the application.</li>
   <ul>
-    <li>git clone https://github.com/chandan1499/Project-glassdoor.git</li>
+    <li>git clone https://github.com/sheikhtausif/travelocity-clone</li>
     <li>cd travelocity-clone</li>
     <li>npm i</li>
     <li>npm start</li>
