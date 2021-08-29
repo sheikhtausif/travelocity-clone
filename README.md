@@ -81,5 +81,5 @@ This is the clone of the travelocity website. Travelocity is a online travel age
 </ul>
 
 ## Read project blog
-<a href="https://chandan1499.hashnode.dev/travelocity-clone" />
+<a href="https://chandan1499.hashnode.dev/travelocity-clone">Travelocity_clone blog</a>
 
