@@ -11,9 +11,55 @@
 }
 
 .left {
-    width: 25%;
+    width: 27%;
 }
 
 .right {
     width: 70%;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 14px;
+}
+
+.first>h1 {
+    font-size: 44px;
+    font-weight: normal;
+}
+
+.first small {
+    color: #2A6EC1;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.count_review {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.count_review>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.third {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 70px 70px;
+    gap: 2%;
+}
+
+.third p {
+    font-size: 13.5px;
 }
