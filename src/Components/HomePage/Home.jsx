@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from "./Home.module.css"
 import ScrollableTabsButtonForce from './Slider';
 import Grid from '@material-ui/core/Grid';
@@ -6,6 +6,10 @@ import Grid from '@material-ui/core/Grid';
 
 
 export function HomePage() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
 
     return (
         <div className={styles.container}>
