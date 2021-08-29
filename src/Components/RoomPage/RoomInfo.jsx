@@ -2,9 +2,19 @@ import React from 'react'
 import Slider from './Slider';
 import { ArrowBack } from '@material-ui/icons';
 import styles from "./room_info.module.css"
-import { Link } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
+import { useAxios } from '../../Hooks/useAxios';
+import { useSelector } from 'react-redux';
 
 const RoomInfo = () => {
+    const { id } = useParams()
+    console.log('id:', id)
+
+    const { paymentAmount } = useSelector(state => state)
+
+    const discountedPrice = Math.floor(paymentAmount * 0.9)
+
+    const history = useHistory()
 
     const ImageData = [
         {
@@ -25,10 +35,21 @@ const RoomInfo = () => {
         },
     ];
 
+    const { hotelData } = useAxios(`http://localhost:3001/data/?hotelId=f14de8c1-57be-4333-9a37-f13acc77836c&&roomTypeId=${id}`)
+    console.log('hotelData:', hotelData)
+
+    const handleBack = () => {
+        history.goBack()
+    }
+
+    const handlePaymentPage = () => {
+        history.push('/payment')
+    }
+
     return (
         <div style={{ color: 'white' }}>
             <div className={styles.goingBackButton}>
-                <Link to="/hotels:1"><ArrowBack /></Link>
+                <ArrowBack onClick={handleBack} style={{ color: '#0d5ab9', cursor: 'pointer' }} />
                 <h3 className={styles.adjustRoomIcon}>Room information</h3>
             </div>
             <div className={styles.travelDisplayFlex}>
@@ -121,12 +142,12 @@ const RoomInfo = () => {
                         <div>
                             <div className={styles.offerDiscount}>10% off</div>
                         </div>
-                        <div className={styles.originalPrice}>$86</div>
-                        <div className={styles.discountedPrice}>$78</div>
+                        <div className={styles.originalPrice}>${paymentAmount}</div>
+                        <div className={styles.discountedPrice}>${discountedPrice}</div>
                         <div className={styles.priceInfoWithDetails}>Per night</div>
                         <div className={styles.priceInfoWithDetails}>Included taxes and fees</div>
                         <div className={styles.reserveBtn}>
-                            <button>Reserve</button>
+                            <button onClick={handlePaymentPage}>Reserve</button>
                         </div>
                     </div>
                 </div>

@@ -28,11 +28,12 @@ const Wrapper = styled.div`
   }
 
   .save {
-    width: 45%;
+    width: 40%;
     padding: 3px 8px;
     border-radius: 10px;
     color: white;
     background: green;
+    text-align: center;
   }
 
   .coupon {
@@ -48,17 +49,17 @@ export const PriceDetail = ({ price }) => {
       <Divider />
       <div className="room-detail">
         <p>1 room x 1 night</p>
-        <p>${price.rate}</p>
+        <p>${price - 29}</p>
       </div>
-      <div className="save">You saved 20%</div>
+      <div className="save">You saved 10%</div>
       <div className="taxes">
         <p>Taxes and fees</p>
-        <p>${price.tax}</p>
+        <p>${29}</p>
       </div>
       <Divider />
       <div className="total">
         <p>Total</p>
-        <p>${price.rate + price.tax}</p>
+        <p>${price}</p>
       </div>
       <p className="coupon">Use a coupon, credit, or promotion code</p>
     </Wrapper>

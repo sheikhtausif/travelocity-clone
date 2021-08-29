@@ -8,7 +8,7 @@ import Policies from './Policies'
 import Review from './Review'
 import styles from './styles/hotelDetails.module.css'
 
-const HotelDetails = ({ hotelData }) => {
+const HotelDetails = ({ hotelData, id }) => {
 
     const options = [
         { title: "Overview", to: "#" },
@@ -58,7 +58,7 @@ const HotelDetails = ({ hotelData }) => {
 
             <div className={styles.room_grid} id="rooms">
                 {hotelData.roomTypes.map(room => (
-                    <Rooms key={room.roomTypeId} room={room} />
+                    <Rooms key={room.roomTypeId} room={room} hId={id} />
                 ))}
             </div>
 
