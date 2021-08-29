@@ -29,3 +29,7 @@ This is the clone of the travelocity website. Travelocity is a online travel age
   <li>Hotel Booking</li>
   <li>Filter hotels list by their ratings, hotel name and price etc.</li>
 </ul>
+
+
+## Demo video of the project
+  <a href="https://drive.google.com/file/d/19y80aIQ5vILaLQNsjLNZPbzLdnRvDyua/view?usp=sharing">Click here to watch demo video</a>
