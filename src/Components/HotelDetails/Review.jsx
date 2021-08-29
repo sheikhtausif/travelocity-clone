@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles/review.module.css'
-import LinearProgress from '@material-ui/core/LinearProgress';
+import Progress from 'react-progressbar';
 
 const Review = () => {
     return (
@@ -19,7 +19,7 @@ const Review = () => {
                             <small>5 - Excellent</small>
                             <small style={{ fontWeight: 'bold' }}>{Math.floor((Math.random() * 30) + 99)}</small>
                         </div>
-                        <LinearProgress />
+                        <Progress complete={70} color="blue" />
                     </div>
                     <div className={styles.third}></div>
                 </div>

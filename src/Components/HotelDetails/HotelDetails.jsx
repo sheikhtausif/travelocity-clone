@@ -5,7 +5,7 @@ import Amenities from './Amenities'
 // import HotelMap from './HotelMap'
 import HotelOverview from './HotelOverview'
 import Policies from './Policies'
-// import Review from './Review'
+import Review from './Review'
 import styles from './styles/hotelDetails.module.css'
 
 const HotelDetails = ({ hotelData }) => {
@@ -72,7 +72,7 @@ const HotelDetails = ({ hotelData }) => {
                 <Policies />
             </div>
             <div id="reviews">
-                {/* <Review /> */}
+                <Review />
             </div>
         </>
     )

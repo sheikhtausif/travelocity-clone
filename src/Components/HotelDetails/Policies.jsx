@@ -1,10 +1,8 @@
 import React from 'react'
 import styles from './styles/policies.module.css'
-import { SiAmericanexpress } from 'react-icons/si';
-import { FaCcDinersClub } from 'react-icons/fa';
-import { FaCcJcb } from 'react-icons/fa';
-import { FaCcMastercard } from 'react-icons/fa';
-import { RiVisaFill } from 'react-icons/ri';
+
+
+const icons = ["https://a.travel-assets.com/dms-svg/payments/cards-cc_master_card.svg", "https://a.travel-assets.com/dms-svg/payments/cards-cc_american_express.svg", "https://a.travel-assets.com/dms-svg/payments/cards-cc_china_union_pay.svg", "https://a.travel-assets.com/dms-svg/payments/cards-cc_diners_club.svg", "https://a.travel-assets.com/dms-svg/payments/cards-cc_discover.svg", "https://a.travel-assets.com/dms-svg/payments/cards-cc_jcb.svg", "https://a.travel-assets.com/dms-svg/payments/cards-cc_visa.svg"]
 
 const Policies = () => {
     return (
@@ -60,11 +58,10 @@ const Policies = () => {
                     <div className={styles.margin}>
                         <h4>Property payment types</h4>
                         <div className={styles.flex_card}>
-                            <SiAmericanexpress />
-                            <FaCcDinersClub />
-                            <FaCcJcb />
-                            <FaCcMastercard />
-                            <RiVisaFill />
+                            {icons.map((icon, index) => (
+                                <img key={index} src={icon} alt="payment_card_logo" />
+                            ))}
+
                         </div>
                     </div>
                 </div>

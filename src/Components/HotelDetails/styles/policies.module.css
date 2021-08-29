@@ -43,8 +43,6 @@
     height: 40px;
 }
 
-.flex_card>:nth-child(n) {
-    font-size: 50px;
-    color: #2A6EC1;
-    height: inherit;
+.flex_card>img {
+    width: 50px;
 }
