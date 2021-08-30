@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    background: "#57a0d7",
+    background: "#0a438b",
   },
   option: {
     display: "flex",
@@ -86,10 +86,10 @@ export const SignIn = () => {
   const [input, setInput] = useState(initState);
   const dispatch = useDispatch();
   const history = useHistory();
-  const userName = useSelector((state)=>state.userName);
+  const userName = useSelector((state) => state.userName);
 
-  if(userName !== ""){
-    return <Redirect to="/" />
+  if (userName !== "") {
+    return <Redirect to="/" />;
   }
 
   const handleChange = (e) => {

@@ -1,47 +1,52 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
-h1, h2, h3, h4, h5, h6 {
-    color: #242c33;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #242c33;
 }
 
 .container {
-    background: #F0F3F5;
-    text-align: justify;
+  background: #f0f3f5;
+  text-align: justify;
 }
 
 .mainBox {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    gap: 22px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 22px;
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #2A6EC1;
-    padding: 12px;
-    background: #FFF;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2a6ec1;
+  padding: 12px;
+  background: #fff;
+  font-size: 14px;
 }
 
-.flex>:nth-child(n):hover {
-    cursor: pointer;
-    text-decoration: underline;
+.flex > :nth-child(n):hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .left {
-    flex-grow: 1;
-    /* background: #FFF; */
+  flex-grow: 1;
+  /* background: #FFF; */
 }
 
 .right {
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
