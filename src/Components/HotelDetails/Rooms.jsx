@@ -28,7 +28,8 @@ const Rooms = ({ room, hId }) => {
 
     const [open, setOpen] = useState(false);
     const [price, setPrice] = useState(0)
-    const [totalPrice, setTotalPrice] = useState(room.roomPrice + price)
+    // const [totalPrice, setTotalPrice] = useState(room.roomPrice + price)
+    const totalPrice = room.roomPrice + price
     console.log('totalPrice:', totalPrice)
 
     const handleOpen = () => {
