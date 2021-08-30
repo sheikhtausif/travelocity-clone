@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Rooms from './Rooms'
 import AboutArea from './AboutArea'
 import Amenities from './Amenities'
@@ -7,8 +7,14 @@ import HotelOverview from './HotelOverview'
 import Policies from './Policies'
 import Review from './Review'
 import styles from './styles/hotelDetails.module.css'
+import Modal from '@material-ui/core/Modal'
+import CloseIcon from '@material-ui/icons/Close';
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
-const HotelDetails = ({ hotelData }) => {
+
+const HotelDetails = ({ hotelData, id }) => {
+
+    const { images } = hotelData
 
     const options = [
         { title: "Overview", to: "#" },
@@ -19,9 +25,47 @@ const HotelDetails = ({ hotelData }) => {
         { title: "Reviews", to: "#reviews" },
     ]
 
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const [current, setCurrent] = useState(0);
+    const length = images.length;
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1);
+    };
+
+    const modal = (
+        <div className={styles.modal}>
+            <CloseIcon className={styles.close} onClick={handleClose} />
+            <FaChevronLeft className={styles.left_arrow} onClick={prevSlide} />
+            <FaChevronRight className={styles.right_arrow} onClick={nextSlide} />
+            <div className={styles.modal_img}>
+                {images.map((slide, index) => {
+                    return (
+                        <div key={index}>
+                            {index === current && <img src={slide.url} alt="hotelImages" />}
+                        </div>
+                    );
+                })}
+
+            </div>
+        </div>
+    )
+
     return (
         <>
-            <div className={styles.flex}>
+            <div className={styles.flex} onClick={handleOpen} style={{ cursor: 'pointer' }}>
                 <div className={styles.left}>
                     <img src={hotelData.images[0].url} alt="" />
                 </div>
@@ -58,7 +102,7 @@ const HotelDetails = ({ hotelData }) => {
 
             <div className={styles.room_grid} id="rooms">
                 {hotelData.roomTypes.map(room => (
-                    <Rooms key={room.roomTypeId} room={room} />
+                    <Rooms key={room.roomTypeId} room={room} hId={id} />
                 ))}
             </div>
 
@@ -74,6 +118,14 @@ const HotelDetails = ({ hotelData }) => {
             <div id="reviews">
                 <Review />
             </div>
+
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="simple-modal-title"
+                aria-describedby="simple-modal-description">
+                {modal}
+            </Modal>
         </>
     )
 }

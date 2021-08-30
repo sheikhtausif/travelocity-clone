@@ -29,13 +29,14 @@ const MainHotelPage = () => {
 
         img: {
             width: '100px',
-        }
+        },
+
     }
 
     return (
         <>
             {isLoading && hotelData.length > 0 ? <div>
-                <MainHotel hotelData={hotelData[0]} />
+                <MainHotel hotelData={hotelData[0]} id={id} />
             </div>
                 : <div style={styles.progress}>
                     <img src={logo} alt="" style={styles.img} />

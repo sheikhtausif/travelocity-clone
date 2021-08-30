@@ -65,7 +65,7 @@ const Review = () => {
                     <div className={styles.first}>
                         <h1>3.9</h1>
                         <div>
-                            <h3>Good</h3>
+                            <h3 style={{ margin: '0' }}>Good</h3>
                             <small>{totalReview} reviews</small>
                         </div>
                     </div>

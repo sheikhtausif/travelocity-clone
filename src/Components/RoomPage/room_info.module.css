@@ -5,7 +5,7 @@
     box-shadow: 0px 1px 0px 0px rgb(17 21 26 / 12%);
 }
 
-.goingBackButton > h3 {
+.goingBackButton>h3 {
     color: #242c33;
     font-size: 1rem;
     font-weight: 500;
@@ -32,7 +32,6 @@
     font-weight: 700;
 }
 
-
 .featureComfort {
     display: flex;
     align-items: center;
@@ -40,7 +39,7 @@
     color: #242c33;
 }
 
-.featureComfort > span {
+.featureComfort>span {
     color: #505c66;
     margin-left: 10px;
 }
@@ -53,7 +52,7 @@
     margin: 0px 0px 0px 20px;
 }
 
-.roomService > li {
+.roomService>li {
     color: #505c66;
     line-height: 1.725rem;
     padding-left: 0.5rem;
@@ -61,78 +60,94 @@
     font-size: 15px;
 }
 
+.priceDetailsHeading, .priceDetails>h4 {
+    color: #242c33;
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-top: 30px;
+}
 
+.priceDetails {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid rgba(80, 92, 102, 0.5);
+}
 
+.priceDetails>h4 {
+    font-size: 0.875rem;
+    margin-top: 10px;
+    padding: 5px 0px;
+}
 
-
-
-.op {
-    background-color: #ffffff;
-    border: 1px solid #242c33;
-    border-radius: 1vh;
-    width: 100%;
-    padding: 1vh;
+.cancellationPolicyMoreDetails {
     display: flex;
-    margin: 0 16px;
+    align-items: center;
+    cursor: pointer;
 }
 
-.optitle {
-    color: #7ab29b;
-}
-
-.ReservePercentage {
-    background-color: #7ab29b;
-    width: 45%;
-    text-align: center;
-    border: 1px solid none;
-    border-radius: 2vh;
-    font-size: 2vh;
-}
-
-.moneyunder {
-    text-decoration: line-through;
-    font-size: 2vh;
-}
-
-.ReserveIncrement {
-    font-size: 3vh;
-}
-
-.moneyunder2 {
-    color: black;
-    font-size: 1.3vh;
-}
-
-.moneyunder3 {
-    color: #0d5ab9;
-    font-size: 2vh;
-}
-
-.ReserveDate {
-    font-size: 1.9vh;
-}
-
-.travelLeftOrRemain {
-    margin-top: 37vh;
-    margin-left: 42vh;
-}
-
-.roominfoBack {
-    color: whitesmoke;
-    font-size: 16px;
-}
-
-.adjustroomicon {
-    margin: 12px;
-}
-
-.ReserveSubmitted {
-    margin-top: 229px;
-}
-
-.travelRoomQuality {
-    margin-top: -0.2vh;
+.cancellationPolicyMoreDetails>a {
+    text-decoration: none;
+    margin-right: 5px;
     color: #505c66;
-    margin-left: 1.3vh;
-    padding-left: 1.2vh;
+    font-size: 0.75rem;
+}
+
+.cancellationPolicyMoreDetails>a:hover {
+    text-decoration: underline;
+}
+
+.priceDetails>li {
+    color: #505c66;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+.offerDiscount {
+    background: #1f7d57;
+    width: 9%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 2px 0px;
+    font-size: 0.75rem;
+    color: white;
+}
+
+.originalPrice {
+    color: #505c66;
+    opacity: 0.5;
+    text-decoration: line-through;
+    margin-top: 5px;
+}
+
+.discountedPrice {
+    color: #242c33;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
+.priceInfoWithDetails {
+    color: #505c66;
+    font-size: 0.625rem;
+    line-height: 1.285;
+}
+
+.reserveBtn {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.reserveBtn>button {
+    background-color: #0d5ab9;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    min-height: 2.25rem;
+    padding: 0.25rem 1rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
 }

@@ -29,3 +29,27 @@
 .leftArrow:hover {
   box-shadow: blue;
 }
+
+.rightArrow, .leftArrow {
+  font-size: 12px;
+  color: #0d5ab9;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: italic;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 48%;
+  right: 20px;
+  padding: 7px 6px 7px 8px;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 48%;
+  left: 20px;
+  padding: 7px 8px 7px 6px;
+}

@@ -1,8 +1,3 @@
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-
 h1,
 h2,
 h3,
@@ -29,7 +24,7 @@ h6 {
   align-items: center;
   gap: 10px;
   color: #2a6ec1;
-  padding: 12px;
+  padding: 4px 12px;
   background: #fff;
   font-size: 14px;
 }
@@ -39,14 +34,6 @@ h6 {
   text-decoration: underline;
 }
 
-.left {
+.content {
   flex-grow: 1;
-  /* background: #FFF; */
-}
-
-.right {
-  width: 160px;
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
 }

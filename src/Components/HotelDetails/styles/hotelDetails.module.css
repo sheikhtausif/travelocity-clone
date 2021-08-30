@@ -104,17 +104,21 @@
     grid-area: name;
 }
 
+.name>h1 {
+    margin: 0;
+}
+
 .name>h3 {
     margin: 16px 0 6px;
 }
 
 .name>p {
-    margin: 8px 0 6px;
+    margin: 8px 0 -8px;
 }
 
 .amenities {
     grid-area: amenities;
-    margin: 24px 0 7px;
+    margin: 2px 0 -4px;
 }
 
 .amenities_1 {
@@ -127,7 +131,7 @@
 
 .safety {
     grid-area: safety;
-    margin: 24px 0 7px;
+    margin: 2px 0 -4px;
 }
 
 .safety_1 {
@@ -139,7 +143,7 @@
 }
 
 .safety_1>:nth-child(n), .safety_2>:nth-child(n), .amenities_1>:nth-child(n), .amenities_2>:nth-child(n) {
-    margin-top: 10px;
+    margin-top: -11px;
 }
 
 /* ! Room Grid */
@@ -149,4 +153,64 @@
     grid-template-columns: 32.7% 32.7% 32.7%;
     grid-template-rows: auto auto auto;
     gap: 10px;
+}
+
+/* ! Modal */
+
+.modal {
+    width: 100%;
+    background: #11151A;
+    padding: 10px
+}
+
+.close {
+    position: absolute;
+    left: 10px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.modal_img {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 95%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_img img {
+    width: 100%;
+}
+
+.right_arrow, .left_arrow {
+    font-size: 12px;
+    color: #0d5ab9;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: italic;
+}
+
+.right_arrow {
+    position: absolute;
+    top: 48%;
+    right: 20px;
+    padding: 7px 6px 7px 8px;
+}
+
+.left_arrow {
+    position: absolute;
+    top: 48%;
+    left: 20px;
+    padding: 7px 8px 7px 6px;
+}
+
+.left_arrow:hover {
+    box-shadow: blue;
 }
