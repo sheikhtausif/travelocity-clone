@@ -292,8 +292,8 @@ export default function ScrollableTabsButtonForce() {
                     <div className={`${styles.hotelBtns} ${styles.hotelTraverls}`} onClick={(e) => { e.stopPropagation(); setTrevelersPopupOpen("inline") }}>
                         <PersonIcon className={styles.Icon} />
                         <div className={styles.HeadingGoingto}>
-                            <div className={styles.checkInHeading}>Trevelers</div>
-                            <div className={styles.checkinDate}>{trevelersRoomCnt} room, {AdultsTrevelers} trevelers</div>
+                            <div className={styles.checkInHeading}>Travelers</div>
+                            <div className={styles.checkinDate}>{trevelersRoomCnt} room, {AdultsTrevelers} travelers</div>
                         </div>
                         {/* ---------slecting traverlers and room--------- */}
                         <div className={styles.traverlersPopup} style={{ display: `${trevelersPopupOpen}` }}>
@@ -565,8 +565,8 @@ export default function ScrollableTabsButtonForce() {
                     <div className={`${styles.hotelBtns} ${styles.hotelTraverls}`} onClick={(e) => { e.stopPropagation(); setTrevelersPopupOpen("inline") }}>
                         <PersonIcon className={styles.Icon} />
                         <div className={styles.HeadingGoingto}>
-                            <div className={styles.checkInHeading}>Trevelers</div>
-                            <div className={styles.checkinDate}>{trevelersRoomCnt} room, {AdultsTrevelers} trevelers</div>
+                            <div className={styles.checkInHeading}>Travelers</div>
+                            <div className={styles.checkinDate}>{trevelersRoomCnt} room, {AdultsTrevelers} travelers</div>
                         </div>
                         {/* ---------slecting traverlers and room--------- */}
                         <div className={styles.traverlersPopup} style={{ display: `${trevelersPopupOpen}` }}>
@@ -722,8 +722,8 @@ export default function ScrollableTabsButtonForce() {
                     <div style={{ width: "47%", marginBottom: "20px" }} className={`${styles.hotelBtns} ${styles.hotelTraverls}`} onClick={(e) => { e.stopPropagation(); setTrevelersPopupOpen("inline") }}>
                         <PersonIcon className={styles.Icon} />
                         <div className={styles.HeadingGoingto}>
-                            <div className={styles.checkInHeading}>Trevelers in the cabin</div>
-                            <div className={styles.checkinDate}>{AdultsTrevelers} trevelers</div>
+                            <div className={styles.checkInHeading}>Travelers in the cabin</div>
+                            <div className={styles.checkinDate}>{AdultsTrevelers} travelers</div>
                         </div>
                         {/* ---------slecting traverlers and room--------- */}
                         <div className={styles.traverlersPopup} style={{ display: `${trevelersPopupOpen}` }}>
