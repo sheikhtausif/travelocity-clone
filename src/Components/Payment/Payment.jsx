@@ -13,20 +13,20 @@ const Wrapper = styled.div`
 
 export const Payment = () => {
 
-  const { paymentAmount } = useSelector(state => state)
+    const { paymentAmount } = useSelector(state => state)
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[])
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
-  return (
-    <Wrapper>
-      <div>
-        <PaymentForm />
-        <FinalSubmit />
-      </div>
+    return (
+        <Wrapper>
+            <div>
+                <PaymentForm />
+                <FinalSubmit />
+            </div>
 
-      <PriceDetail price={paymentAmount} />
-    </Wrapper>
-  );
+            <PriceDetail price={paymentAmount} />
+        </Wrapper>
+    );
 };

@@ -96,14 +96,14 @@ export default function ScrollableTabsButtonForce() {
         if (isSearching || query === "") {
             return;
         }
-
         handleSearchByQuery();
+        // eslint-disable-next-line
     }, [query])
 
     const handleSearchByQuery = () => {
         setIsSearching(false);
 
-        axios.get(`http://localhost:3001/places?q=${query}&_limit=50`).then((res) => {
+        axios.get(`https://my-api-data.herokuapp.com/places?q=${query}&_limit=50`).then((res) => {
             setSearchQueryResult(res.data);
         }).catch((err) => {
             console.log(err);

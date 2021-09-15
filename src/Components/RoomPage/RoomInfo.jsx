@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import Slider from './Slider';
 import { ArrowBack } from '@material-ui/icons';
 import styles from "./room_info.module.css"
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import { useAxios } from '../../Hooks/useAxios';
 import { useSelector } from 'react-redux';
 
 const RoomInfo = () => {
     const { id } = useParams()
-    console.log('id:', id)
+    // console.log('id:', id)
 
     const { paymentAmount } = useSelector(state => state)
 
@@ -39,8 +39,9 @@ const RoomInfo = () => {
         },
     ];
 
-    const { hotelData } = useAxios(`http://localhost:3001/data/?hotelId=f14de8c1-57be-4333-9a37-f13acc77836c&&roomTypeId=${id}`)
-    console.log('hotelData:', hotelData)
+    // eslint-disable-next-line
+    const { hotelData } = useAxios(`https://my-api-data.herokuapp.com/data/?hotelId=f14de8c1-57be-4333-9a37-f13acc77836c&&roomTypeId=${id}`)
+    // console.log('hotelData:', hotelData)
 
     const handleBack = () => {
         history.goBack()
@@ -137,7 +138,7 @@ const RoomInfo = () => {
                     <div className={styles.priceDetails}>
                         <h4>Cancellation policy</h4>
                         <div className={styles.cancellationPolicyMoreDetails}>
-                            <a href="#">More details on all policy options</a>
+                            <Link to="#">More details on all policy options</Link>
                             <svg width="18px" ariaHidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><svg><path fill="#505c66" fillRule="evenodd" d="M2 12a10 10 0 1120 0 10 10 0 01-20 0zm11-1v6h-2v-6h2zm-1 9a8.01 8.01 0 010-16 8.01 8.01 0 010 16zm1-13v2h-2V7h2z" clipRule="evenodd"></path></svg></svg>
                         </div>
                         <li>Fully refundable on cancellation 12hrs. before check in</li>

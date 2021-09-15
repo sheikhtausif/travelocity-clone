@@ -22,41 +22,41 @@ import { loginFailure, loginSuccess } from "../../Store/Action";
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: "100%",
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-    background: "#0a438b",
-  },
-  option: {
-    display: "flex",
-    flexDirection: "column",
-    marginTop: "70px",
-  },
+    paper: {
+        marginTop: theme.spacing(8),
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+    },
+    avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.secondary.main,
+    },
+    form: {
+        width: "100%",
+        marginTop: theme.spacing(1),
+    },
+    submit: {
+        margin: theme.spacing(3, 0, 2),
+        background: "#0a438b",
+    },
+    option: {
+        display: "flex",
+        flexDirection: "column",
+        marginTop: "70px",
+    },
 
-  button: {
-    width: "50%",
-    marginBottom: "20px",
-  },
+    button: {
+        width: "50%",
+        marginBottom: "20px",
+    },
 
-  btnColor: {},
+    btnColor: {},
 
-  icon: {
-    width: "15px",
-    marginRight: "5px",
-  },
+    icon: {
+        width: "15px",
+        marginRight: "5px",
+    },
 }));
 
 const Wrapper = styled.div`
@@ -77,138 +77,138 @@ const Wrapper = styled.div`
 `;
 
 const initState = {
-  email: "",
-  password: "",
+    email: "",
+    password: "",
 };
 
 export const SignIn = () => {
-  const classes = useStyles();
-  const [input, setInput] = useState(initState);
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const userName = useSelector((state)=>state.userName);
+    const classes = useStyles();
+    const [input, setInput] = useState(initState);
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const userName = useSelector((state) => state.userName);
 
-  if(userName !== ""){
-    return <Redirect to="/" />
-  }
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setInput({ ...input, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const { data } = await axios.get(
-      `http://localhost:3001/users/?email=${input.email}`
-    );
-
-    if (data[0] === undefined || data[0].password !== input.password) {
-      swal("Invalid Credentials!");
-      dispatch(loginFailure());
-    } else {
-      dispatch(loginSuccess(data[0].firstName));
-      swal("Logged in successfully");
-      history.push("/");
+    if (userName !== "") {
+        return <Redirect to="/" />
     }
-  };
 
-  return (
-    <Wrapper>
-      <Container className={classes.option}>
-        <Button
-          className={classes.button}
-          variant="outlined"
-          color="default"
-          startIcon={<AppleIcon />}
-        >
-          Sign in with apple
-        </Button>
-        <Button
-          className={classes.button}
-          variant="contained"
-          color="primary"
-          startIcon={<FacebookIcon />}
-        >
-          Sign in with Facebook
-        </Button>
-        <div className="messege">
-          <span>
-            <VpnKeyIcon className={classes.icon} />
-          </span>
-          We kepp it private
-        </div>
-        <div className="messege">
-          <VerifiedUserRoundedIcon className={classes.icon} />
-          Share only with permission
-        </div>
-        <div className="messege">
-          <WatchLaterIcon className={classes.icon} />
-          Quick sign-in no passwords
-        </div>
-      </Container>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-          <Typography component="h1" variant="h5">
-            or Sign in with your email
-          </Typography>
-          <form
-            className={classes.form}
-            noValidate={false}
-            onSubmit={handleSubmit}
-          >
-            <TextField
-              onChange={handleChange}
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoFocus
-              autoComplete="email"
-            />
-            <TextField
-              onChange={handleChange}
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link to="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/signUp">{"Don't have an account? Sign Up"}</Link>
-              </Grid>
-            </Grid>
-          </form>
-        </div>
-      </Container>
-    </Wrapper>
-  );
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setInput({ ...input, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const { data } = await axios.get(
+            `https://my-api-data.herokuapp.com/users/?email=${input.email}`
+        );
+
+        if (data[0] === undefined || data[0].password !== input.password) {
+            swal("Invalid Credentials!");
+            dispatch(loginFailure());
+        } else {
+            dispatch(loginSuccess(data[0].firstName));
+            swal("Logged in successfully");
+            history.push("/");
+        }
+    };
+
+    return (
+        <Wrapper>
+            <Container className={classes.option}>
+                <Button
+                    className={classes.button}
+                    variant="outlined"
+                    color="default"
+                    startIcon={<AppleIcon />}
+                >
+                    Sign in with apple
+                </Button>
+                <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                    startIcon={<FacebookIcon />}
+                >
+                    Sign in with Facebook
+                </Button>
+                <div className="messege">
+                    <span>
+                        <VpnKeyIcon className={classes.icon} />
+                    </span>
+                    We kepp it private
+                </div>
+                <div className="messege">
+                    <VerifiedUserRoundedIcon className={classes.icon} />
+                    Share only with permission
+                </div>
+                <div className="messege">
+                    <WatchLaterIcon className={classes.icon} />
+                    Quick sign-in no passwords
+                </div>
+            </Container>
+            <Container component="main" maxWidth="xs">
+                <CssBaseline />
+                <div className={classes.paper}>
+                    <Typography component="h1" variant="h5">
+                        or Sign in with your email
+                    </Typography>
+                    <form
+                        className={classes.form}
+                        noValidate={false}
+                        onSubmit={handleSubmit}
+                    >
+                        <TextField
+                            onChange={handleChange}
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="email"
+                            label="Email Address"
+                            name="email"
+                            autoFocus
+                            autoComplete="email"
+                        />
+                        <TextField
+                            onChange={handleChange}
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="password"
+                            label="Password"
+                            type="password"
+                            id="password"
+                            autoComplete="password"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox value="remember" color="primary" />}
+                            label="Remember me"
+                        />
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                            className={classes.submit}
+                        >
+                            Sign In
+                        </Button>
+                        <Grid container>
+                            <Grid item xs>
+                                <Link to="#" variant="body2">
+                                    Forgot password?
+                                </Link>
+                            </Grid>
+                            <Grid item>
+                                <Link to="/signUp">{"Don't have an account? Sign Up"}</Link>
+                            </Grid>
+                        </Grid>
+                    </form>
+                </div>
+            </Container>
+        </Wrapper>
+    );
 };

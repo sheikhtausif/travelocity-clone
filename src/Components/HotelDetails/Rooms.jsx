@@ -30,7 +30,7 @@ const Rooms = ({ room, hId }) => {
     const [price, setPrice] = useState(0)
     // const [totalPrice, setTotalPrice] = useState(room.roomPrice + price)
     const totalPrice = room.roomPrice + price
-    console.log('totalPrice:', totalPrice)
+    // console.log('totalPrice:', totalPrice)
 
     const handleOpen = () => {
         dispatch(paymentType(totalPrice))

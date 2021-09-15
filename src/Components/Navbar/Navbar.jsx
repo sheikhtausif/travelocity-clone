@@ -7,7 +7,7 @@ export function Navbar() {
     const userName = useSelector((state) => state.userName);
     const dispatch = useDispatch();
 
-    console.log(userName);
+    // console.log(userName);
 
     const handleSignOut = () => {
         dispatch(logOut());
@@ -22,12 +22,12 @@ export function Navbar() {
                     </div>
                     <div>
                         <ul className={styles.navLinks}>
-                            <li><a className={styles.travelNavLink} href="#">Español </a> </li>
-                            <li><a className={styles.travelNavLink} href="#">List your property</a></li>
-                            <li><a className={styles.travelNavLink} href="#">Support</a></li>
-                            <li><a className={styles.travelNavLink} href="#">Trips</a></li>
+                            <li><Link className={styles.travelNavLink} to="#">Español </Link> </li>
+                            <li><Link className={styles.travelNavLink} to="#">List your property</Link></li>
+                            <li><Link className={styles.travelNavLink} to="#">Support</Link></li>
+                            <li><Link className={styles.travelNavLink} to="#">Trips</Link></li>
                             <li><Link className={styles.travelNavLink} to="/signIn">{(userName === "") ? "Sign In" : userName}</Link></li>
-                            <li><Link className={styles.travelNavLink} style={{display: `${(userName === "") ? "none" : "inline"}`}} to="#" onClick={handleSignOut}>Sign out</Link></li>
+                            <li><Link className={styles.travelNavLink} style={{ display: `${(userName === "") ? "none" : "inline"}` }} to="#" onClick={handleSignOut}>Sign out</Link></li>
                         </ul>
                     </div>
                 </div>

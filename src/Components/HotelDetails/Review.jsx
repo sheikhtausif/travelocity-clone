@@ -147,7 +147,7 @@ const Review = () => {
                 </div>
                 <div className={styles.right}>
                     {reviews.map((review, index) => (
-                        <div div key={index} className={styles.abc} >
+                        <div div key={index} className={styles.abc}>
                             <h3>{review.rating}/5 {review.rating === 5 ? "Excellent" : review.rating === 4 ? "Good" : review.rating === 3 ? "Okay" : review.rating === 2 ? "Poor" : "Terrible"}</h3>
                             <h4>{review.user}</h4>
                             <p style={{ marginTop: "-10px" }}>{review.date}</p>

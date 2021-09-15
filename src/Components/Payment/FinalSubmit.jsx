@@ -64,7 +64,6 @@ export const FinalSubmit = () => {
                     button: false,
                     title: "Your booking has been successful!",
                     timer: 3000,
-                    confirmButtonColor: "#2A6EC1",
                 });
                 setTimeout(() => {
                     history.push('/')

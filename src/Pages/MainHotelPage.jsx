@@ -9,7 +9,8 @@ const MainHotelPage = () => {
     const { id } = useParams()
     const [isLoading, setIsLoading] = useState(false)
 
-    const { hotelData } = useAxios(`http://localhost:3001/data/?hotelId=${id}`)
+    const { hotelData } = useAxios(`https://my-api-data.herokuapp.com/data?hotelId=${id}`)
+    // console.log('hotelData:', hotelData)
 
     useEffect(() => {
         setTimeout(() => {
@@ -35,9 +36,10 @@ const MainHotelPage = () => {
 
     return (
         <>
-            {isLoading && hotelData.length > 0 ? <div>
-                <MainHotel hotelData={hotelData[0]} id={id} />
-            </div>
+            {isLoading && hotelData.length > 0 ?
+                <div>
+                    <MainHotel hotelData={hotelData[0]} id={id} />
+                </div>
                 : <div style={styles.progress}>
                     <img src={logo} alt="" style={styles.img} />
                     <CircularProgress />
