@@ -1,5 +1,5 @@
 # Travelocity Clone Project
-This is the clone of the travelocity website. Travelocity is a online travel agency. From this website users can book a hotel rooms, flights, cars etc. across the world.
+This is the clone of the Travelocity website. Travelocity is an online travel agency. From this website, users can book a hotel room, flights, cars, etc. across the world.
 
 ## How to run the app
 <ul>
