@@ -1,17 +1,3 @@
-
-
-<!-- ## How to run the app -->
-<!-- <ul>
-  <li>Clone the repo and run following command to start the application.</li>
-  <ul>
-    <li>git clone https://github.com/sheikhtausif/travelocity-clone</li>
-    <li>cd travelocity-clone</li>
-    <li>npm i</li>
-    <li>npm start</li>
-    <li>json-server --watch db.json --port 3001(on new terminal)</li>
-  </ul>
-</ul> -->
-
 # Travelocity Clone
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
@@ -32,7 +18,6 @@ Executing the commands mentioned below one by one in your command line will help
 ```
 git clone https://github.com/sheikhtausif/indeed-clone.git
 npm install
-
 ```
 
 **To run the react app execute below command**
@@ -40,7 +25,6 @@ npm install
 ```
 cd ./travelocity-clone
 npm run start
-
 ```
 
 ## Built with
