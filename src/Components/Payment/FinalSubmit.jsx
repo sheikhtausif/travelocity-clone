@@ -4,6 +4,8 @@ import { Button, makeStyles } from "@material-ui/core";
 import LockIcon from "@material-ui/icons/Lock";
 import swal from 'sweetalert'
 import { useHistory } from 'react-router-dom'
+import { useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 const Wrapper = styled.div`
   background: white;
@@ -51,6 +53,7 @@ const useStyle = makeStyles({
 export const FinalSubmit = () => {
     const history = useHistory()
     const classes = useStyle();
+    const userName = useSelector((state) => state.userName);
 
     const successPayment = () => {
         swal({
@@ -77,6 +80,10 @@ export const FinalSubmit = () => {
             }
         })
 
+    }
+
+    if(userName == ""){
+        return <Redirect to="/signIn" />
     }
 
     return (
