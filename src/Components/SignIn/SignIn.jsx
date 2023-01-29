@@ -102,7 +102,7 @@ export const SignIn = () => {
         e.preventDefault();
 
         const { data } = await axios.get(
-            `${BASE_URLs}/users/?email=${input.email}`
+            `${BASE_URL}/users/?email=${input.email}`
         );
 
         if (data[0] === undefined || data[0].password !== input.password) {

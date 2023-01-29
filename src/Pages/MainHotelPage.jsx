@@ -42,7 +42,7 @@ const MainHotelPage = () => {
                     <MainHotel hotelData={hotelData[0]} id={id} />
                 </div>
                 : <div style={styles.progress}>
-                    <img src={logo} alt="" style={styles.img} />
+                    <img src={logo} alt="logo" style={styles.img} />
                     <CircularProgress />
                 </div>}
         </>

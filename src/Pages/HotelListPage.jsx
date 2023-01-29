@@ -21,25 +21,25 @@ const Wrapper = styled.div`
 `;
 
 export const HotelsListPage = () => {
-  const [loading, setloading] = useState(true);
+    const [loading, setloading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setloading(false);
-    }, 2000);
-  });
-  return (
-    <>
-      {loading ? (
-        <Wrapper>
-          <div className="progress">
-            <img src={logo} alt="" />
-            <CircularProgress />
-          </div>
-        </Wrapper>
-      ) : (
-        <HotelList />
-      )}
-    </>
-  );
+    useEffect(() => {
+        setTimeout(() => {
+            setloading(false);
+        }, 2000);
+    });
+    return (
+        <>
+            {loading ? (
+                <Wrapper>
+                    <div className="progress">
+                        <img src={logo} alt="logo" />
+                        <CircularProgress />
+                    </div>
+                </Wrapper>
+            ) : (
+                <HotelList />
+            )}
+        </>
+    );
 };

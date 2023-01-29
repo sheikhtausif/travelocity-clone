@@ -10,6 +10,8 @@ import { BASE_URL } from "../utils/constant";
 export const PaymentPage = () => {
     const { id } = useParams();
     const { hotelData } = useAxios(`${BASE_URL}/data/?hotelId=${id}`);
+    const loginStatus = useSelector(state => state.userName);
+    const history = useHistory();
 
     useEffect(() => {
         window.scrollTo(0, 0);
