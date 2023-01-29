@@ -5,7 +5,7 @@ import { useAxios } from "../Hooks/useAxios";
 
 export const PaymentPage = () => {
     const { id } = useParams();
-    const { hotelData } = useAxios(`https://my-api-data.herokuapp.com/data/?hotelId=${id}`);
+    const { hotelData } = useAxios(`https://api-json-data.onrender.com/data/?hotelId=${id}`);
 
     useEffect(() => {
         setTimeout(() => { }, 2500);

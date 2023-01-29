@@ -9,7 +9,7 @@ const MainHotelPage = () => {
     const { id } = useParams()
     const [isLoading, setIsLoading] = useState(false)
 
-    const { hotelData } = useAxios(`https://my-api-data.herokuapp.com/data?hotelId=${id}`)
+    const { hotelData } = useAxios(`https://api-json-data.onrender.com/data?hotelId=${id}`)
     // console.log('hotelData:', hotelData)
 
     useEffect(() => {

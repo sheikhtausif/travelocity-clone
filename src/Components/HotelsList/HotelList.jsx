@@ -95,7 +95,7 @@ export const HotelList = () => {
 
     const handleSearchHotelByQuery = () => {
         setIsSearching(true);
-        axios.get(`https://my-api-data.herokuapp.com/data?name_like=${searchQuery}`).then((res) => {
+        axios.get(`https://api-json-data.onrender.com/data?name_like=${searchQuery}`).then((res) => {
             setData(data);
             setHotels(data);
         }).catch((err) => {
@@ -130,7 +130,7 @@ export const HotelList = () => {
     const getData = () => {
         setloading(true);
         axios
-            .get("https://my-api-data.herokuapp.com/data")
+            .get("https://api-json-data.onrender.com/data")
             .then((res) => {
                 const { data } = res
                 setData(data);
