@@ -1,17 +1,31 @@
-# Travelocity Clone Project
-This is the clone of the Travelocity website. Travelocity is an online travel agency. From this website, users can book a hotel room, flights, cars, etc. across the world.
+# Travelocity Clone
 
-## How to run the app
-<ul>
-  <li>Clone the repo and run following command to start the application.</li>
-  <ul>
-    <li>git clone https://github.com/sheikhtausif/travelocity-clone</li>
-    <li>cd travelocity-clone</li>
-    <li>npm i</li>
-    <li>npm start</li>
-    <li>json-server --watch db.json --port 3001(on new terminal)</li>
-  </ul>
-</ul>
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+This is the clone of the Travelocity website. Travelocity is an online travel agency. From this website, users can book a hotel room, flights, cars, etc. across the world.
+<br/><br/>
+
+**To see the live site click the below link.**
+
+
+https://travelocity-clone.vercel.app
+
+## Installing and Running
+
+Executing the commands mentioned below one by one in your command line will help in making this React app .
+**Cloning**
+
+```
+git clone https://github.com/sheikhtausif/indeed-clone.git
+cd ./travelocity-clone
+npm install
+```
+
+**To run the react app execute below command**
+
+```
+npm run start
+```
 
 ## Built with
 <ul>
@@ -19,6 +33,7 @@ This is the clone of the Travelocity website. Travelocity is an online travel ag
   <li>Redux</li>
   <li>HTML</li>
   <li>CSS</li>
+  <li>JavaScript</li>
 </ul>
 
 ## Used libraries
@@ -26,11 +41,12 @@ This is the clone of the Travelocity website. Travelocity is an online travel ag
   <li>node modules</li>
   <li>Styled-Components</li>
   <li>axios</li>
-  <li>React</li>
+  <li>React Js</li>
   <li>Redux</li>
   <li>React-router-dom</li>
-  <li>Material UI</li>
-  <li>React Icon</li>
+  <li>Material-UI</li>
+  <li>Material-Icons</li>
+  <li>React Icons</li>
 </ul>
 
 ## Features

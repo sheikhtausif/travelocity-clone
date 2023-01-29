@@ -1,15 +1,41 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Payment } from "../Components/Payment/Payment";
 import { useAxios } from "../Hooks/useAxios";
+import { useHistory } from "react-router-dom";
+import swal from 'sweetalert'
+import { BASE_URL } from "../utils/constant";
 
 export const PaymentPage = () => {
     const { id } = useParams();
-    const { hotelData } = useAxios(`https://api-json-data.onrender.com/data/?hotelId=${id}`);
+    const { hotelData } = useAxios(`${BASE_URL}/data/?hotelId=${id}`);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         setTimeout(() => { }, 2500);
     }, []);
+
+    if (loginStatus === "") {
+        swal({
+            title: "You have to login for reserve a hotel room.",
+            icon: "info",
+            buttons: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                history.push("/signIn");
+            } else {
+                swal("Room booking has been canceled", {
+                    icon: "error",
+                    button: false,
+                    timer: 1500,
+                }).then(() => {
+                    history.goBack();
+                });
+            }
+        })
+    }
+
     return (
         <>
             <Payment hotelData={hotelData} />

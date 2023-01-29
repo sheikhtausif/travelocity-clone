@@ -5,6 +5,7 @@ import styles from "./room_info.module.css"
 import { useParams, useHistory, Link } from 'react-router-dom';
 import { useAxios } from '../../Hooks/useAxios';
 import { useSelector } from 'react-redux';
+import { BASE_URL } from '../../utils/constant';
 
 const RoomInfo = () => {
     const { id } = useParams()
@@ -40,7 +41,7 @@ const RoomInfo = () => {
     ];
 
     // eslint-disable-next-line
-    const { hotelData } = useAxios(`https://api-json-data.onrender.com/data/?hotelId=f14de8c1-57be-4333-9a37-f13acc77836c&&roomTypeId=${id}`)
+    const { hotelData } = useAxios(`${BASE_URL}/data/?hotelId=f14de8c1-57be-4333-9a37-f13acc77836c&&roomTypeId=${id}`)
     // console.log('hotelData:', hotelData)
 
     const handleBack = () => {

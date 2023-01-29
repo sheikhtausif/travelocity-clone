@@ -20,6 +20,7 @@ import swal from "sweetalert";
 import { useDispatch, useSelector } from "react-redux";
 import { loginFailure, loginSuccess } from "../../Store/Action";
 import { useHistory } from "react-router-dom";
+import { BASE_URL } from "../../utils/constant";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -101,7 +102,7 @@ export const SignIn = () => {
         e.preventDefault();
 
         const { data } = await axios.get(
-            `https://api-json-data.onrender.com/users/?email=${input.email}`
+            `${BASE_URLs}/users/?email=${input.email}`
         );
 
         if (data[0] === undefined || data[0].password !== input.password) {

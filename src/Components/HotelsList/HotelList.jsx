@@ -24,6 +24,7 @@ import { PropertyType } from "./Filters/PropertyType";
 import { PopularLocation } from "./Filters/PopularLocation";
 import { Mealplans } from "./Filters/MealPlans";
 import { useHistory } from "react-router";
+import { BASE_URL } from "../../utils/constant";
 // import { useAxios } from "../../Hooks/useAxios";
 
 const useStyle = makeStyles({
@@ -95,7 +96,7 @@ export const HotelList = () => {
 
     const handleSearchHotelByQuery = () => {
         setIsSearching(true);
-        axios.get(`https://api-json-data.onrender.com/data?name_like=${searchQuery}`).then((res) => {
+        axios.get(`${BASE_URL}/data?name_like=${searchQuery}`).then((res) => {
             setData(data);
             setHotels(data);
         }).catch((err) => {
@@ -130,7 +131,7 @@ export const HotelList = () => {
     const getData = () => {
         setloading(true);
         axios
-            .get("https://api-json-data.onrender.com/data")
+            .get(`${BASE_URL}/data`)
             .then((res) => {
                 const { data } = res
                 setData(data);

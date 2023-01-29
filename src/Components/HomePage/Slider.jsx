@@ -23,6 +23,7 @@ import { useHistory } from 'react-router-dom';
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import SwapHorizSharpIcon from '@material-ui/icons/SwapHorizSharp';
+import { BASE_URL } from '../../utils/constant';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -103,7 +104,7 @@ export default function ScrollableTabsButtonForce() {
     const handleSearchByQuery = () => {
         setIsSearching(false);
 
-        axios.get(`https://api-json-data.onrender.com/places?q=${query}&_limit=50`).then((res) => {
+        axios.get(`${BASE_URL}/places?q=${query}&_limit=50`).then((res) => {
             setSearchQueryResult(res.data);
         }).catch((err) => {
             console.log(err);

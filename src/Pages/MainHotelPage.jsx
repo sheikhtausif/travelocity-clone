@@ -4,12 +4,13 @@ import { useParams } from 'react-router-dom'
 import { useAxios } from '../Hooks/useAxios'
 import { CircularProgress } from '@material-ui/core'
 import logo from '../logo.svg'
+import { BASE_URL } from '../utils/constant'
 
 const MainHotelPage = () => {
     const { id } = useParams()
     const [isLoading, setIsLoading] = useState(false)
 
-    const { hotelData } = useAxios(`https://api-json-data.onrender.com/data?hotelId=${id}`)
+    const { hotelData } = useAxios(`${BASE_URL}/data?hotelId=${id}`)
     // console.log('hotelData:', hotelData)
 
     useEffect(() => {
