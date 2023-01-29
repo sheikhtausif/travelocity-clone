@@ -3,7 +3,7 @@ import CheckIcon from "@material-ui/icons/Check";
 import { Button, makeStyles } from "@material-ui/core";
 import LockIcon from "@material-ui/icons/Lock";
 import swal from 'sweetalert'
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 
 const Wrapper = styled.div`
   background: white;
